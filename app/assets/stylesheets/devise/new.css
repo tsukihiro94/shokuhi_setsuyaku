@@ -1,0 +1,58 @@
+.top-logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-image{
+  width: 80px;
+}
+
+.form-contents{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+
+
+
+.form{
+  padding-top: 45px;
+}
+
+.input-default{
+  display: block;
+  height: 40px;
+  width: 280px;
+}
+
+.form-text{
+  font-size: 16px;
+}
+
+.indispensable{
+  border-radius: 0.3em;
+  font-size: 13px;
+  background-color: red;
+  color: white;
+}
+
+
+
+.submit-btn{
+  padding:10px 50px;
+}
+
+.error-alert {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+
+.error-message {
+  font-size: 1.3vw;
+  list-style: circle;
+  color: rgb(182, 48, 0);
+}

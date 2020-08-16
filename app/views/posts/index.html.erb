@@ -2,16 +2,21 @@
 
 <header>
   <div class = "header-logo">
-     <%= link_to image_tag("yen.png",class: "logo-image"), "#" %>
+     <%= link_to image_tag("yen.png",class: "logo-image"), "/" %>
   </div>
   <div class = "heading">
     <h2 class = "title">カンタン食費節約家計簿🐷</h2>
   </div>
   <div class = "navbar">
     <ul class = "nav-lists">
-      <li><%= link_to image_tag("toukou.png",class: "toukou-image"), "#"%></li>
-      <li><%= link_to "ログイン", "#" ,class: "btn" %></li>
-      <li><%= link_to "新規登録", "#" ,class: "btn" %></li>
+      <% if user_signed_in? %>
+       <li><%= link_to image_tag("toukou.png",class: "toukou-image"), "#"%></li>
+       <li><%= link_to "ログアウト", destroy_user_session_path ,method: :delete, class: "btn" %></li>
+       <li><%= link_to "マイページ", "#" ,class: "btn" %></li>
+      <% else%>
+       <li><%= link_to "ログイン", new_user_session_path ,class: "btn" %></li>
+       <li><%= link_to "新規登録", new_user_registration_path ,class: "btn" %></li>
+      <% end%>
     </ul>
   </div>
 </header>
