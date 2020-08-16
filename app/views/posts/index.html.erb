@@ -1,0 +1,37 @@
+<%= stylesheet_link_tag "post/index", :media => "all" %>
+
+<header>
+  <div class = "header-logo">
+     <%= link_to image_tag("yen.png",class: "logo-image"), "#" %>
+  </div>
+  <div class = "heading">
+    <h2 class = "title">カンタン食費節約家計簿🐷</h2>
+  </div>
+  <div class = "navbar">
+    <ul class = "nav-lists">
+      <li><%= link_to image_tag("toukou.png",class: "toukou-image"), "#"%></li>
+      <li><%= link_to "ログイン", "#" ,class: "btn" %></li>
+      <li><%= link_to "新規登録", "#" ,class: "btn" %></li>
+    </ul>
+  </div>
+</header>
+<div class = "contents">
+  <div class = "first-view">
+    <div class="left-content">
+      <h1 class= "main-letter">誰でも簡単に食費を節約できる</h1>
+    </div>
+    <div class="right-conten">
+      <%= image_tag "pekopigu.png" ,class: "character-image" %>
+    </div>
+  </div>
+  <div class = "intro-video">
+    <div class = "intro-logo">アプリ動画紹介</div>
+  </div>
+  <div class = "posts-list">
+    <div class = "posts-logo">節約術投稿一覧</div>
+      <%= link_to image_tag("kizitoukou.png",class: "kigi-image"), "#" %>
+  </div>
+</div>
+<footer>
+  <p class = "footer">Copyright 2020 shokuhi-setsuyaku All right reserved</p>
+</footer>
