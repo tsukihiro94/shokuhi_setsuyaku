@@ -1,0 +1,29 @@
+.logo-image{
+  margin: 10px 0  0 10px;
+  width: 80px;
+}
+.contents{
+  height: 100%;
+  display: flex;
+}
+
+.left-content{
+  width: 30vw;
+  background-color: lightpink;
+}
+
+.right-content{
+  height: 500px;
+  background-color:blue;
+}
+
+.content1{
+  height: 70vh;
+  width: 70vw;
+  background-color: yellow;
+}
+
+.content2{
+  background-color: wheat;
+  height: 30vh;
+}

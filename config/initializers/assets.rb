@@ -15,3 +15,4 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 Rails.application.config.assets.precompile += %w( post/index.css )
 Rails.application.config.assets.precompile += %w( devise/new.css )
+Rails.application.config.assets.precompile += %w( expense/index.css )
