@@ -5,59 +5,16 @@
 <div class = "contents">
   <div class = "left-content">
     <h2>カンタン家計簿</h2>
-    <%= form_with model:@expense, class: 'expense-main', local: true do |f|%>
+    <%= form_with(model: @expense, local: true) do |f|%>
       <label for="bday">日にちを選んで下さい！</label>
         <%= f.date_field :day, class: 'recod-date' %>
-      <div class = "form-group">
-        <%= f.collection_select(:hoge, [], :hoge, :hoge, {}, {class:"select-box", id:"item-category"}) %>
-        <%= f.text_field :name, class:"name-default", placeholder:"詳細" %>
-        <%= f.text_field :price, class:"price-default", placeholder:"値段" %>
-      </div>
-      <div class = "form-group">
-        <%= f.collection_select(:hoge, [], :hoge, :hoge, {}, {class:"select-box", id:"item-category"}) %>
-        <%= f.text_field :name, class:"name-default", placeholder:"詳細" %>
-        <%= f.text_field :price, class:"price-default", placeholder:"値段" %>
-      </div>
-      <div class = "form-group">
-        <%= f.collection_select(:hoge, [], :hoge, :hoge, {}, {class:"select-box", id:"item-category"}) %>
-        <%= f.text_field :name, class:"name-default", placeholder:"詳細" %>
-        <%= f.text_field :price, class:"price-default", placeholder:"値段" %>
-      </div>
-      <div class = "form-group">
-        <%= f.collection_select(:hoge, [], :hoge, :hoge, {}, {class:"select-box", id:"item-category"}) %>
-        <%= f.text_field :name, class:"name-default", placeholder:"詳細" %>
-        <%= f.text_field :price, class:"price-default", placeholder:"値段" %>
-      </div>
-      <div class = "form-group">
-        <%= f.collection_select(:hoge, [], :hoge, :hoge, {}, {class:"select-box", id:"item-category"}) %>
-        <%= f.text_field :name, class:"name-default", placeholder:"詳細" %>
-        <%= f.text_field :price, class:"price-default", placeholder:"値段" %>
-      </div>
-      <div class = "form-group">
-        <%= f.collection_select(:hoge, [], :hoge, :hoge, {}, {class:"select-box", id:"item-category"}) %>
-        <%= f.text_field :name, class:"name-default", placeholder:"詳細" %>
-        <%= f.text_field :price, class:"price-default", placeholder:"値段" %>
-      </div>
-      <div class = "form-group">
-        <%= f.collection_select(:hoge, [], :hoge, :hoge, {}, {class:"select-box", id:"item-category"}) %>
-        <%= f.text_field :name, class:"name-default", placeholder:"詳細" %>
-        <%= f.text_field :price, class:"price-default", placeholder:"値段" %>
-      </div>
-      <div class = "form-group">
-        <%= f.collection_select(:hoge, [], :hoge, :hoge, {}, {class:"select-box", id:"item-category"}) %>
-        <%= f.text_field :name, class:"name-default", placeholder:"詳細" %>
-        <%= f.text_field :price, class:"price-default", placeholder:"値段" %>
-      </div>
-      <div class = "form-group">
-        <%= f.collection_select(:hoge, [], :hoge, :hoge, {}, {class:"select-box", id:"item-category"}) %>
-        <%= f.text_field :name, class:"name-default", placeholder:"詳細" %>
-        <%= f.text_field :price, class:"price-default", placeholder:"値段" %>
-      </div>
-      <div class = "form-group">
-        <%= f.collection_select(:hoge, [], :hoge, :hoge, {}, {class:"select-box", id:"item-category"}) %>
-        <%= f.text_field :name, class:"name-default", placeholder:"詳細" %>
-        <%= f.text_field :price, class:"price-default", placeholder:"値段" %>
-      </div>
+        <div id = "form-group">
+          <%= f.collection_select(:category_id_1, Category.all, :id, :name, {}, {class:"select-box"}) %>
+          <%= f.text_field :name_1, class:"name-default", id:"name_1", placeholder:"詳細1" %>
+          <%= f.text_field :price_1, class:"price-default",  id:"price_1", placeholder:"値段1" %>
+        </div>
+        <input type="button" value="追加" id="add" >
+        <input type="button" value="削除" id="delete" >
         <%= f.submit "登録" ,class: "submit-btn" %>
     <% end %>
   </div>
