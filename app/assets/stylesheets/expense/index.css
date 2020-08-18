@@ -8,22 +8,37 @@
 }
 
 .left-content{
-  width: 30vw;
+  width: 25vw;
   background-color: lightpink;
 }
 
 .right-content{
   height: 500px;
-  background-color:blue;
+  display: flex;
+
 }
 
 .content1{
-  height: 70vh;
-  width: 70vw;
-  background-color: yellow;
+  width: 40vw;
+
 }
 
 .content2{
   background-color: wheat;
-  height: 30vh;
+  width: 35vw;
+}
+
+select{
+  padding:6px;
+}
+
+input{
+  padding:8px 0px;
+  width: 100px;
+}
+
+td{
+  padding: 2px;
+  border: 2px solid skyblue;
+  border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
 }
