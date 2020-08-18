@@ -5,7 +5,7 @@
 <div class = "contents">
   <div class = "left-content">
     <h2>カンタン家計簿</h2>
-    <%= form_with(model: @expense, local: true) do |f|%>
+    <%= form_with(model: @expense,id: "form" ,local: true) do |f|%>
       <label for="bday">日にちを選んで下さい！</label>
         <%= f.date_field :day, class: 'recod-date' %>
         <div id = "form-group">
@@ -18,16 +18,20 @@
         <%= f.submit "登録" ,class: "submit-btn" %>
     <% end %>
   </div>
+  <div id="list">
+  </div>
+
   <div class = "right-content">
     <div class = "content1">
     <% @expenses.each do |expense| %>
+    <div class = "expense">
       <div class ="day">
         <%= expense.day %>
       </div>
-      <% i =+ 1 %>
-    <div class = "name_price">
-    <table>
-    <tr>
+        <% i =+ 1 %>
+      <div class = "name_price">
+      <table>
+      <tr>
       <td><%= eval("expense.name_#{i}")%>
       <%= eval("expense.price_#{i}")%>  
       <%= eval("expense.name_#{i + 1}") %>
@@ -48,8 +52,9 @@
       <%= eval("expense.price_#{i + 8}") %>
       <%= eval("expense.name_#{i + 9}")%>
       <%= eval("expense.price_#{i + 9}")%></td>
-    </tr>
-    </table>
+      </tr>
+      </table>
+      </div>
     </div>
     <% end %>
     </div>
