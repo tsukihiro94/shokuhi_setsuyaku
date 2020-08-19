@@ -8,14 +8,22 @@ class ExpensesController < ApplicationController
 
   def create
     @expense = Expense.new(expense_params)
+    
     if @expense.save
       redirect_to expenses_path
     else
       render :index
     end
-
   end
 
+  def destroy
+    expense = Expense.find(params[:id])
+   if expense.destroy
+    redirect_to expenses_path
+   else
+    render :index
+   end
+  end
 
 private
 

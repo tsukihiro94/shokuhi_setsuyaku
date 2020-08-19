@@ -1,5 +1,11 @@
 window.addEventListener('load',function(){
   console.log("ok")
+
+  // const a = document.getElementById('nameGroup');
+
+// a.addEventListener('mouseover', function(){
+//   console.log("ok1");
+// });
   
   let f = 1
   const e = 1
