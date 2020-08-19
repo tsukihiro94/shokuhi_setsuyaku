@@ -25,6 +25,10 @@ class ExpensesController < ApplicationController
    end
   end
 
+  def search
+    @expenses = Expense.search(params[:keyword])
+  end
+
 private
 
   def expense_params

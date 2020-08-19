@@ -1,0 +1,9 @@
+<%= form_with(url: search_expenses_path, local: true, method: :get, class: "search-form") do |form| %>
+        <%= form.date_field :keyword, class: "search-input" %>
+        <%= form.submit "日別表示", class: "search-btn" %>
+<% end %>
+<div class="contents row">
+  <% @expenses.each do |expense| %>
+    <%= render partial: "expense", locals: { expense: expense } %>
+  <% end %>
+</div>
