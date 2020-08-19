@@ -22,7 +22,6 @@
   </div>
   <div id="list">
   </div>
-
   <div class = "right-content">
     <div class = "content1">
     <% @expenses.each do |expense| %>
@@ -58,6 +57,9 @@
       </div>
     </div>
     <% end %>
+    <div class ="paginate">
+    <%= will_paginate @expenses, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>　
+    </div>
     </div>
     <div class = "content2">2
     </div>

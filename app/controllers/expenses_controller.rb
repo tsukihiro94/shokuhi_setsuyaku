@@ -32,7 +32,7 @@ private
   end
 
   def set_expenses
-    @expenses = Expense.all.order(day: "ASC")
+    @expenses = Expense.paginate(page: params[:page], per_page: 8).all.order(day: "ASC")
   end
 
  
