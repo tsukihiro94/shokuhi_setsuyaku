@@ -17,7 +17,7 @@
         </div>
         <input type="button" value="追加" id="add" >
         <input type="button" value="削除" id="delete" >
-        <%= f.submit "登録" ,class: "submit-btn" %>
+        <%= f.submit "登録" , id: "submit-btn",data: {confirm: "登録しますか？"} %>
     <% end %>
   </div>
   <div id="list">
@@ -52,7 +52,7 @@
       <%= eval("expense.price_#{i + 8}") %>
       <%= eval("expense.name_#{i + 9}")%>
       <%= eval("expense.price_#{i + 9}")%>
-      <%= link_to '削除', "/expenses/#{expense.id}" , method: :delete %></td>
+      <%= link_to '削除', "/expenses/#{expense.id}" , method: :delete, data: {confirm: "削除しますか？"}, class: "delBtn" %></td>
       </tr>
       </table>
       </div>

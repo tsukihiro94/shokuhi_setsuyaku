@@ -1,5 +1,5 @@
 function expense(){
-  const submit = document.getElementsByClassName("submit-btn");
+  const submit = document.getElementById("submit-btn");
   submit.addEventListener("click",(e) => {
     const formData = new FormData(document.getElementById("form"));
     const XHR = new XMLHttpRequest();
@@ -7,9 +7,9 @@ function expense(){
     XHR.responseType = "json";
     XHR.send(formData);
     XHR.onload = () => {
-      const item = XHR.response.post;
+      const item = XHR.response.Post;
       const list = document.getElementById("list");
-      const formGroup = document.getElementById("form-group");
+      const formGroup = document.getElementById("group");
       const HTML = 
       `<div class ="day">
         ${item.day}
@@ -37,7 +37,8 @@ function expense(){
            eval${item[`name_` + (i + 8)]}
            eval${item[`price_` + (i + 8)]}
            eval${item[`name_` + (i + 9)]}
-           eval${item[`price_` + (i + 9)]}</td>
+           eval${item[`price_` + (i + 9)]}
+           <a class="delBtn" rel="nofollow" data-method="delete" href="/expenses/#{expense.id}">削除</a></td>
     </tr>
     </table>
     </div`
