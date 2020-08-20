@@ -32,6 +32,7 @@
   </div>
   <div class = "right-content">
     <div class = "content1">
+    <% @sum = 0 %>
     <% @expenses.each do |expense| %>
        <%= render partial: "expense", locals: { expense: expense } %>
     <% end %>

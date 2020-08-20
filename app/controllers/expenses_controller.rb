@@ -4,6 +4,7 @@ class ExpensesController < ApplicationController
 
   def show
    @expense = Expense.new
+
   end
 
   def create
