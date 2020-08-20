@@ -19,7 +19,7 @@
 
 
 .form{
-  padding-top: 45px;
+  padding-top: 30px;
 }
 
 .input-default{
@@ -39,7 +39,10 @@
   color: white;
 }
 
-
+.comment{
+  font-size: 5px;
+  color: red;
+}
 
 .submit-btn{
   padding:10px 50px;

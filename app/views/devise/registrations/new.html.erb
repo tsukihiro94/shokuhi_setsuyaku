@@ -27,6 +27,12 @@
     <%= f.password_field :password_confirmation, class:"input-default",placeholder:"同じパスワードを入力して下さい", minlength:"6" %>
   </div>
   <div class="form">
+    <label class="form-text">月次目標食費額</label>
+    <span class="indispensable">必須</span>
+    <%= f.number_field :target_amount, class:"input-default", placeholder:"例）30000" ,step:"100"%>
+    <p class ="comment">※あとからマイページで編集できます</p>
+    </div>
+  <div class="form">
     <div class="submit">
       <%= f.submit "登録" ,class: "submit-btn" %>
     </div>

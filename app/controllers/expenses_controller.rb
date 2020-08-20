@@ -1,8 +1,8 @@
 class ExpensesController < ApplicationController
-  before_action :set_expenses, :index
+  before_action :set_expenses, :show
 
 
-  def index
+  def show
    @expense = Expense.new
   end
 
@@ -10,23 +10,23 @@ class ExpensesController < ApplicationController
     @expense = Expense.new(expense_params)
     
     if @expense.save
-      redirect_to expenses_path
+      redirect_to  "/expenses/#{current_user.id}"
     else
-      render :index
+      render :show
     end
   end
 
   def destroy
     expense = Expense.find(params[:id])
    if expense.destroy
-    redirect_to expenses_path
+    redirect_to  "/expenses/#{current_user.id}"
    else
-    render :index
+    render :show
    end
   end
 
   def search
-    @expenses = Expense.search(params[:keyword])
+    @expenses = current_user.expenses.search(params[:keyword])
   end
 
 private
@@ -36,7 +36,9 @@ private
   end
 
   def set_expenses
-    @expenses = Expense.paginate(page: params[:page], per_page: 8).all.order(day: "ASC")
+    @target_amount = current_user.target_amount
+    @nickname = current_user.nickname
+    @expenses = current_user.expenses.paginate(page: params[:page], per_page: 7).all.order(day: "ASC")
   end
 
  

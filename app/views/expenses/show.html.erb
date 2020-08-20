@@ -1,6 +1,9 @@
 <%= stylesheet_link_tag "expense/index", :media => "all" %>
-
 <%= link_to image_tag("yen.png",class: "logo-image"), "/" %>
+<div class = "header">
+  <p class = "nickname"><%= @nickname %>さんの月次目標食費額</p>
+  <p class = "target_amount"><%= @target_amount.to_s(:delimited) %>円</p>
+</div>
 <div class= "search_form">
   <%= form_with(url: search_expenses_path, local: true, method: :get, class: "search-form") do |form| %>
     <%= form.date_field :keyword, class: "search-input" %>
@@ -32,9 +35,11 @@
     <% @expenses.each do |expense| %>
        <%= render partial: "expense", locals: { expense: expense } %>
     <% end %>
-    <div class ="paginate">
-    <%= will_paginate @expenses, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>　
     </div>
+    <div class ="content2">
+      <div class ="paginate">
+        <%= will_paginate @expenses, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>　
+      </div>
     </div>
   </div>
 </div>

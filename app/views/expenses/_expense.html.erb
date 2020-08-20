@@ -1,30 +1,96 @@
-   <div class = "expense">
+   <div class = "expenses">
         <% i =+ 1 %>
       <div class = "name_price" , id ="nameGroup">
       <table>
-      <%= expense.day %>
+      <div class = "day">
+        <%= expense.day.strftime('%m月%d日') %>
+      </div>
       <tr>
-      <td class = "td"><%= eval("expense.name_#{i}")%>
-      <%= eval("expense.price_#{i}")%>  
-      <%= eval("expense.name_#{i + 1}") %>
-      <%= eval("expense.price_#{i + 1}") %>
-      <%= eval("expense.name_#{i + 2}") %>
-      <%= eval("expense.price_#{i + 2}") %>
-      <%= eval("expense.name_#{i + 3}") %>
-      <%= eval("expense.price_#{i + 3}") %>
-      <%= eval("expense.name_#{i + 4}") %>
-      <%= eval("expense.price_#{i + 4}") %>
-      <%= eval("expense.name_#{i + 5}") %>
-      <%= eval("expense.price_#{i + 5}") %>
-      <%= eval("expense.name_#{i + 6}") %>
-      <%= eval("expense.price_#{i + 6}") %>
-      <%= eval("expense.name_#{i + 7}") %>
-      <%= eval("expense.price_#{i + 7}") %>
-      <%= eval("expense.name_#{i + 8}") %>
-      <%= eval("expense.price_#{i + 8}") %>
-      <%= eval("expense.name_#{i + 9}")%>
-      <%= eval("expense.price_#{i + 9}")%>
-      <%= link_to '削除', "/expenses/#{expense.id}" , method: :delete, data: {confirm: "削除しますか？"}, class: "delBtn" %></td>
+      <td class = "td">
+      <div class = "expense">
+        <div class = "name">
+          <%= eval("expense.name_#{i}") %>
+        </div> 
+        <div class = "price">
+          <%= eval("expense.price_#{i}.to_s(:delimited)") %>
+        </div>
+      </div>
+      <div class = "expense">
+        <div class = "name">
+          <%= eval("expense.name_#{i + 1}") %>
+        </div> 
+        <div class = "price">
+          <%= eval("expense.price_#{i + 1}") %>
+        </div>
+      </div>
+      <div class = "expense">
+        <div class = "name">
+          <%= eval("expense.name_#{i + 2}") %>
+        </div> 
+        <div class = "price">
+          <%= eval("expense.price_#{i + 2}") %>
+        </div>
+      </div>
+      <div class = "expense">
+        <div class = "name">
+          <%= eval("expense.name_#{i + 3}") %>
+        </div> 
+        <div class = "price">
+          <%= eval("expense.price_#{i + 3}") %>
+        </div>
+      </div>
+      <div class = "expense">
+        <div class = "name">
+          <%= eval("expense.name_#{i + 4}") %>
+        </div> 
+        <div class = "price">
+          <%= eval("expense.price_#{i + 4}") %>
+        </div>
+      </div>
+      <div class = "expense">
+        <div class = "name">
+          <%= eval("expense.name_#{i + 5}") %>
+        </div> 
+        <div class = "price">
+          <%= eval("expense.price_#{i +5}") %>
+        </div>
+      </div>
+      <div class = "expense">
+        <div class = "name">
+          <%= eval("expense.name_#{i + 6}") %>
+        </div> 
+        <div class = "price">
+          <%= eval("expense.price_#{i + 6}") %>
+        </div>
+      </div>
+      <div class = "expense">
+        <div class = "name">
+          <%= eval("expense.name_#{i + 7}") %>
+        </div> 
+        <div class = "price">
+          <%= eval("expense.price_#{i + 7}") %>
+        </div>
+      </div>
+      <div class = "expense">
+        <div class = "name">
+          <%= eval("expense.name_#{i + 8}") %>
+        </div> 
+        <div class = "price">
+          <%= eval("expense.price_#{i + 8}") %>
+        </div>
+      </div>
+       <div class = "expense">
+        <div class = "name">
+          <%= eval("expense.name_#{i + 9}") %>
+        </div> 
+        <div class = "price">
+          <%= eval("expense.price_#{i + 9}") %>
+        </div>
+      </div>
+      <div class ="del">
+        <%= link_to '消', "/expenses/#{expense.id}" , method: :delete, data: {confirm: "削除しますか？"}, class: "delBtn" %>
+      </div>
+      </td>
       </tr>
       </table>
       </div>

@@ -1,6 +1,20 @@
+.header{
+  display: flex;
+  margin: 0px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.target_amount{
+  color:red;
+}
+
 .logo-image{
+  position: absolute;
+  left: 0px;
   margin: 10px 0  0 10px;
-  width: 80px;
+  width: 70px;
 }
 
 .search_form{
@@ -20,13 +34,14 @@
 
 .right-content{
   height: 500px;
-  display: flex;
   width: 75vw;
 }
 
 .content1{
   background-color: #ddd;
+  height: 93%;
   width: 100%;
+  display: flex;
 }
 
 select{
@@ -35,17 +50,59 @@ select{
 
 input{
   padding:8px 0px;
-  width: 100px;
+  width: 130px;
 }
 
-
+.name_price{
+  background-color: skyblue;
+ 
+}
+.expenses{
+ margin: 10px;
+}
 
 td{
   padding: 2px;
   border: 2px solid skyblue;
   border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
+
 }
 
+.expense{
+  display: flex;
+  justify-content: space-between;
+}
+
+.day{
+  text-align-last: center;
+  font-size:10px;
+  font-weight: 900;
+}
+
+.price{
+  margin-left: 20px;
+
+}
+
+.del{
+  position: relative;
+}
+
+.delBtn{
+  margin-top: 5px;
+  padding: 1px 10px;
+  text-decoration: none;
+  position: absolute;
+  right: 2px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #eb6100;
+  border-radius: 100vh;
+}
+
+.content2{
+  height: 10%;
+}
 
 ul.pagination {
   display: inline-block;
@@ -70,3 +127,8 @@ ul.pagination li a.active {
 }
 
 ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+
+table{
+  position: relative;
+}
+
