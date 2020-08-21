@@ -9,7 +9,6 @@ window.addEventListener('DOMContentLoaded',() => {
       const number = (Number(val[i].textContent))
       
       total[i] = number
-      
     } else {
       return
     }; 

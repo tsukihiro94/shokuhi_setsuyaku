@@ -27,7 +27,7 @@ class ExpensesController < ApplicationController
   end
 
   def search
-    @expenses = current_user.expenses.search(params[:keyword])
+    @expenses = current_user.expenses.search(params[:keyword]).all.order(day: "ASC")
   end
 
 private
