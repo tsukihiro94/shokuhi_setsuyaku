@@ -1,0 +1,25 @@
+<%= stylesheet_link_tag "expense/search", :media => "all" %>
+<input type="hidden" id = "target_amount" value = <%= @target_amount %> >
+  <%= link_to image_tag("mypage.png",class: "logo-image"), "/expenses/#{current_user.id}" %>
+<div class = "header">
+  <div class = "by_day"><span id="ByDay"></span></div>
+  <%= form_with(url: search_expenses_path, local: true, method: :get, class: "search-form") do |form| %>
+    <%= form.date_field :keyword, class: "search-input" %>
+    <%= form.submit "日別表示", class: "search-btn" %>
+  <% end %>
+</div>
+
+<div class = "contents">
+  <div class="left_content">
+    <% @expenses.each do |expense| %>
+    <input type="hidden" id = "month" value = <%= expense.day.strftime('%m') %>>
+    <input type="hidden" id = "year" value = <%= expense.day.strftime('%Y') %>>
+      <%= render partial: "expense", locals: { expense: expense } %>
+    <% end %>
+  </div>
+  <div class = "right_content">
+      <div class = "total_price">合計金額:<span id="total_price"></span>円</div>
+      <div class = "judgment1"><span id="judgment_1"></span></div>
+      <div class = "judgment2"><span id="judgment_2"></span></div>
+  </div>
+</div>

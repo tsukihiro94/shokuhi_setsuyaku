@@ -1,0 +1,47 @@
+<%= stylesheet_link_tag "expense/index", :media => "all" %>
+<input type="hidden" id = "user_id" value= <%="/expenses/#{current_user.id}"%> >
+<%= link_to image_tag("yen.png",class: "logo-image"), "/"%>
+<div class = "header">
+  <p class = "nickname"><%= @nickname %>さんの月次目標食費額</p>
+  <p class = "target_amount"><%= @target_amount.to_s(:delimited) %>円
+</div>
+<div class= "search_form">
+  <%= form_with(url: search_expenses_path, local: true, method: :get, class: "search-form") do |form| %>
+    <%= form.date_field :keyword, class: "search-input" %>
+    <%= form.submit "日別表示", class: "search-btn" %>
+  <% end %>
+</div>
+<div class = "contents">
+  <div class = "left-content">
+    <h2>カンタン家計簿</h2>
+    <%= form_with(model: @expense,id: "form" ,local: true) do |f|%>
+      <label for="bday">日にちを選んで下さい！</label>
+        <%= f.date_field :day, class: 'recod-date' %>
+        <div id = "form-group" name= "form">
+         <div id = "group">
+          <%= f.collection_select(:category_id_1, Category.all, :id, :name, {}, {class:"select-box"}) %>
+          <%= f.text_field :name_1, class:"name-default", id:"name_1", placeholder:"詳細1"%>
+          <%= f.text_field :price_1, class:"price-default",  id:"price_1", placeholder:"値段1"%>
+         </div>
+        </div>
+        <input type="button" value="追加" id="add" >
+        <input type="button" value="削除" id="delete" >
+        <%= f.submit "登録" , id: "submit-btn",data: {confirm: "登録しますか？"} %>
+    <% end %>
+  </div>
+  <div id="list">
+  </div>
+  <div class = "right-content">
+    <div class = "content1">
+    <% @sum = 0 %>
+    <% @expenses.each do |expense| %>
+       <%= render partial: "expense", locals: { expense: expense } %>
+    <% end %>
+    </div>
+    <div class ="content2">
+      <div class ="paginate">
+        <%= will_paginate @expenses, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>　
+      </div>
+    </div>
+  </div>
+</div>

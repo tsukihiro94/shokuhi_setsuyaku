@@ -1,0 +1,137 @@
+.header{
+  display: flex;
+  margin: 0px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.target_amount{
+  color:red;
+}
+
+.logo-image{
+  position: absolute;
+  left: 0px;
+  margin: 10px 0  0 10px;
+  width: 70px;
+}
+
+.search_form{
+  position: absolute;
+  right: 20px;
+  top:10px;
+}
+.contents{
+  height: 100%;
+  display: flex;
+}
+
+.left-content{
+  width: 25vw;
+  background-color: lightpink;
+}
+
+.right-content{
+  height: 500px;
+  width: 75vw;
+}
+
+.content1{
+  background-color: #ddd;
+  height: 93%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+select{
+  padding:6px;
+}
+
+input{
+  padding:4px 0px;
+  width: 120px;
+}
+
+.name_price{
+  background-color: skyblue;
+ 
+}
+.expenses{
+ margin: 10px;
+}
+
+td{
+  padding: 2px;
+  border: 2px solid skyblue;
+  border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
+
+}
+
+.expense {
+  display: flex;
+  justify-content: space-between;
+}
+
+.day{
+  text-align-last: center;
+  font-size:10px;
+  font-weight: 900;
+}
+
+.price .sum{
+  margin-left: 20px;
+
+}
+.sum{
+  display: flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.del{
+  position: relative;
+}
+
+.delBtn{
+  margin-top: 5px;
+  padding: 1px 10px;
+  text-decoration: none;
+  position: absolute;
+  right: 2px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #eb6100;
+  border-radius: 100vh;
+}
+
+.content2{
+  height: 10%;
+}
+
+ul.pagination {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+ul.pagination li a.active {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+
+

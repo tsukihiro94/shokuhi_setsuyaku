@@ -1,0 +1,98 @@
+.header{
+  height: 15vh;
+  background-color: khaki;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.by_day{
+  font-size: 30px;
+  text-align: center;
+  align-items: center;
+}
+.sum_value{
+  text-align: center;
+}
+
+.logo-image{
+  position: absolute;
+  left: 0px;
+  margin: 10px 0  0 10px;
+  width: 70px;
+}
+
+.search-input{
+  position: absolute;
+  right: 20px;
+  top:10px;
+}
+.search-btn{
+  position: absolute;
+  right: 20px;
+  top: 40px;
+}
+
+.contents{
+  height: 70%;
+  display: flex;
+
+}
+
+.name_price{
+  background-color: skyblue;
+  border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.expenses{
+ margin: 10px;
+}
+
+.expense {
+  display: flex;
+  justify-content: space-between;
+  font-size: 3vh;
+}
+
+.day{
+  text-align-last: center;
+  font-size:3vh;
+  font-weight: 900;
+}
+
+
+
+.price .sum{
+  margin-left: 20px;
+
+}
+.sum{
+  display: flex;
+  text-align: center;
+  font-size: 4vh;
+  justify-content: space-between;
+}
+
+
+.delBtn{
+  display: none;
+
+}
+
+.right_content{
+  background-color:red;
+  width: 60vw;
+}
+
+.total_price{
+  font-size:40px;
+}
+
+.judgment1 {
+  font-size:45px;
+}
+.judgment2 {
+  font-size:45px;
+}
