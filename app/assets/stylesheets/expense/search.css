@@ -1,0 +1,72 @@
+.header{
+  height: 15vh;
+  background-color: khaki;
+}
+
+.logo-image{
+  position: absolute;
+  left: 0px;
+  margin: 10px 0  0 10px;
+  width: 70px;
+}
+
+.search-input{
+  position: absolute;
+  right: 20px;
+  top:10px;
+}
+.search-btn{
+  position: absolute;
+  right: 20px;
+  top: 40px;
+}
+
+.contents{
+  height: 70%;
+  display: flex;
+
+}
+
+.name_price{
+  background-color: skyblue;
+  border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
+
+}
+.expenses{
+ margin: 10px;
+}
+
+.expense {
+  display: flex;
+  justify-content: space-between;
+  font-size: 3vh;
+}
+
+.day{
+  text-align-last: center;
+  font-size:3vh;
+  font-weight: 900;
+}
+
+
+
+.price .sum{
+  margin-left: 20px;
+
+}
+.sum{
+  display: flex;
+  text-align-last: center;
+  font-size: 4vh;
+}
+
+
+.delBtn{
+  display: none;
+
+}
+
+.right_content{
+  background-color:red;
+  width: 60vw;
+}

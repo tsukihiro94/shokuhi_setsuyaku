@@ -98,7 +98,9 @@
           </div>
         </div>
         <div class = "sum">
-          <p>合計金額:<%= @sum.to_s(:delimited) %>円</p>
+          <p>合計金額:</p>
+          <p class ="sum_value" ><%= @sum %></p>
+          <p>円</p>
         </div>
        <div class ="del">
          <%= link_to '消', "/expenses/#{expense.id}" , method: :delete, data: {confirm: "削除しますか？"}, class: "delBtn" %>

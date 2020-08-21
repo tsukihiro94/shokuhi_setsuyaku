@@ -1,8 +1,9 @@
 <%= stylesheet_link_tag "expense/index", :media => "all" %>
-<%= link_to image_tag("yen.png",class: "logo-image"), "/" %>
+<input type="hidden" id = "user_id" value= <%="/expenses/#{current_user.id}"%> >
+<%= link_to image_tag("yen.png",class: "logo-image"), "/"%>
 <div class = "header">
   <p class = "nickname"><%= @nickname %>さんの月次目標食費額</p>
-  <p class = "target_amount"><%= @target_amount.to_s(:delimited) %>円</p>
+  <p class = "target_amount"><%= @target_amount.to_s(:delimited) %>円
 </div>
 <div class= "search_form">
   <%= form_with(url: search_expenses_path, local: true, method: :get, class: "search-form") do |form| %>
@@ -16,11 +17,11 @@
     <%= form_with(model: @expense,id: "form" ,local: true) do |f|%>
       <label for="bday">日にちを選んで下さい！</label>
         <%= f.date_field :day, class: 'recod-date' %>
-        <div id = "form-group">
+        <div id = "form-group" name= "form">
          <div id = "group">
           <%= f.collection_select(:category_id_1, Category.all, :id, :name, {}, {class:"select-box"}) %>
-          <%= f.text_field :name_1, class:"name-default", id:"name_1", placeholder:"詳細1" %>
-          <%= f.text_field :price_1, class:"price-default",  id:"price_1", placeholder:"値段1" %>
+          <%= f.text_field :name_1, class:"name-default", id:"name_1", placeholder:"詳細1"%>
+          <%= f.text_field :price_1, class:"price-default",  id:"price_1", placeholder:"値段1"%>
          </div>
         </div>
         <input type="button" value="追加" id="add" >
