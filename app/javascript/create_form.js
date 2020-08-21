@@ -1,13 +1,14 @@
-window.addEventListener('load',function(){
-  
+window.addEventListener('DOMContentLoaded',function(){
+  const path =  location.pathname
+  const myPagePath = document.getElementById('user_id').value
+   
+  if (path === myPagePath) {
 
-  
-  let f = 1
-  const e = 1
+    let f = 1
+    const e = 1
 
     const btn = document.getElementById('add')
-  
-  btn.addEventListener('click', function(){
+    btn.addEventListener('click', function(){
     const form = document.getElementById('form-group')
   
     const option = [
@@ -59,4 +60,5 @@ window.addEventListener('load',function(){
     // const delForm = document.getElementById('name_' + )
     // form.removeChild(delForm);
    });   
-  });
+  }
+});
