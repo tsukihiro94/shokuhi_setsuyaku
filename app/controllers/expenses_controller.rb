@@ -1,5 +1,5 @@
 class ExpensesController < ApplicationController
-  before_action :set_expenses, :show
+  before_action :set_expenses, only: [:show, :search]
 
 
   def show
