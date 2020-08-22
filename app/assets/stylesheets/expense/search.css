@@ -82,7 +82,6 @@
 }
 
 .right_content{
-  background-color:red;
   width: 60vw;
 }
 
@@ -95,4 +94,15 @@
 }
 .judgment2 {
   font-size:45px;
+}
+
+.character-image1{
+  display: none;
+}
+.character-image2{
+  display: none;
+}
+
+.character-image3{
+  display: none;
 }

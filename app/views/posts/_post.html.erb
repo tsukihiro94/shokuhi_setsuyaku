@@ -6,4 +6,8 @@
   <div class = "nickname">
     <%= post.user.nickname %>
   </div>
+    <input type="hidden" class = "post_user_id" id ="post_user_id"  value = <%= post.user_id %> >
+  <div class ="del">
+    <%= link_to '消', "/posts/#{post.id}" , method: :delete, data: {confirm: "削除しますか？"}, class: "delBtn" %>
+  </div>
 </div>

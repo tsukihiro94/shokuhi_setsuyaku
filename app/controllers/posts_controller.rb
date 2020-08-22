@@ -13,9 +13,19 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to root_path
     else
-      render action: :index
+      render :new
     end
   end
+
+  def destroy
+    post = Post.find(params[:id])
+   if post.destroy
+    redirect_to  root_path
+   else
+    render :index
+   end
+  end
+
 
 private
 
