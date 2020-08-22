@@ -28,21 +28,24 @@
 }
 
 .left-content{
-  width: 25vw;
+  width: 30%;
   background-color: lightpink;
 }
 
 .right-content{
-  height: 500px;
-  width: 75vw;
+  height: 550px;
+  width: 70%;
 }
 
 .content1{
   background-color: #ddd;
-  height: 93%;
+  height: 100%;
   width: 100%;
   display: flex;
   align-items: flex-end;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
 }
 
 select{
@@ -60,14 +63,11 @@ input{
 }
 .expenses{
  margin: 10px;
+ display: inline-block;
+ width: 90%;
 }
 
-td{
-  padding: 2px;
-  border: 2px solid skyblue;
-  border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
 
-}
 
 .expense {
   display: flex;
@@ -106,32 +106,22 @@ td{
   border-radius: 100vh;
 }
 
-.content2{
-  height: 10%;
-}
-
 ul.pagination {
   display: inline-block;
   padding: 0;
   margin: 0;
+  font-size:20px;
 }
 
 ul.pagination li {display: inline;}
 
 ul.pagination li a {
-  color: black;
+  color:skyblue;
   float: left;
-  padding: 8px 16px;
+  padding: 8px 8px;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 50px;
 }
 
-ul.pagination li a.active {
-  background-color: #4CAF50;
-  color: white;
-  border-radius: 5px;
-}
 
-ul.pagination li a:hover:not(.active) {background-color: #ddd;}
-
-
+ul.pagination li a:hover:not(.active) {background-color: seashell;}

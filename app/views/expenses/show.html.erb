@@ -38,10 +38,5 @@
        <%= render partial: "expense", locals: { expense: expense } %>
     <% end %>
     </div>
-    <div class ="content2">
-      <div class ="paginate">
-        <%= will_paginate @expenses, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>　
-      </div>
-    </div>
   </div>
 </div>

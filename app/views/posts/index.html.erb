@@ -34,7 +34,16 @@
   </div>
   <div class = "posts-list">
     <div class = "posts-logo">節約術投稿一覧</div>
-      <%= link_to image_tag("kizitoukou.png",class: "kigi-image"), "#" %>
+      <% link_to image_tag("kizitoukou.png",class: "kigi-image"), "#" %>
+      <div class = "post-all">
+        <% @posts.each do |post| %>
+          <%= render partial: "post", locals: { post: post } %>
+        <% end %>
+      </div>
+      <div class ="paginate">
+        <%= will_paginate @posts, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
+     </div>
+    </div>
   </div>
 </div>
 <footer>

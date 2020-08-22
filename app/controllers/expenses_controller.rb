@@ -40,7 +40,7 @@ private
     @expenses = Expense.all
     @target_amount = current_user.target_amount
     @nickname = current_user.nickname
-    @expenses = current_user.expenses.paginate(page: params[:page], per_page: 7).all.order(day: "ASC")
+    @expenses = current_user.expenses.all.order(day: "ASC")
   end
 
  

@@ -8,6 +8,6 @@ class User < ApplicationRecord
   validates :password, format: {with: /\A(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}\z/, message: "Include both letters and numbers"}
 
   has_many :expenses
-
+  has_many :post
 end
  
