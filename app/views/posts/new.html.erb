@@ -1,0 +1,20 @@
+<%= stylesheet_link_tag "devise/new", :media => "all" %>
+
+<div class = "top-logo">
+  <%= link_to image_tag("yen.png",class: "logo-image"), "/" %>
+</div>
+<%= form_with model: @user,url: user_registration_path, class: 'registration-main', local: true do |f| %>
+
+<div class = "form-contents">  
+  <div class = "form">
+    <label class="form-text">私の節約術</label>
+    <span class="indispensable">🐖</span> 
+    <%= f.text_area :nickname, class:"input-default", placeholder:"例）あなたの節約術を書き込もう！", autofocus: true, maxlength:"30" %>
+  </div>
+  <div class="form">
+    <div class="submit">
+      <%= f.submit "投稿" ,class: "submit-btn" %>
+    </div>
+  </div>
+</div>
+ <% end %>
