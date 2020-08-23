@@ -1,0 +1,41 @@
+.top-logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-image{
+  width: 80px;
+}
+
+.form-contents{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+
+
+.form{
+  padding-top: 20px;
+}
+
+.input-default{
+  display: block;
+  height: 100px;
+  width: 340px;
+}
+
+.form-text{
+  font-size: 20px;
+}
+
+::placeholder {
+  color: lightpink;
+}
+
+
+.submit-btn{
+  padding:10px 50px;
+}

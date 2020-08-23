@@ -1,6 +1,6 @@
 .header{
+  position: relative;
   height: 15vh;
-  background-color: khaki;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,27 +16,40 @@
 }
 
 .logo-image{
-  position: absolute;
-  left: 0px;
-  margin: 10px 0  0 10px;
   width: 70px;
+  position: absolute;
+  left: 20px;
+  top:12px;
+}
+.back_image{
+  display: block;
+  flex-direction: column;
 }
 
+.back_text{
+  position: absolute;
+  left: 0px;
+  top:80px;
+}
 .search-input{
   position: absolute;
   right: 20px;
-  top:10px;
+  top:15px;
 }
 .search-btn{
   position: absolute;
   right: 20px;
-  top: 40px;
+  top: 45px;
 }
 
 .contents{
   height: 70%;
   display: flex;
 
+}
+
+.left_content{
+  width: 20vw;
 }
 
 .name_price{
@@ -82,17 +95,53 @@
 }
 
 .right_content{
-  background-color:red;
-  width: 60vw;
+  display: flex;
+  width: 80vw;
 }
 
 .total_price{
   font-size:40px;
 }
 
+
 .judgment1 {
   font-size:45px;
 }
 .judgment2 {
   font-size:45px;
+}
+
+.advice{
+  font-size:45px;
+}
+
+.character-image1, .character-image2, .character-image3{
+  display: none;
+}
+
+a{
+  text-decoration: none;
+  margin-right: 50px;
+}
+
+.bottom-content{
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn{
+  border-radius: 0.5em;
+  background-color: #eaf6fd;
+  padding: 30px;
+  font-size: 30px;
+  color: #3b82c4;
+  box-shadow: 10px 15px #3b82c4;
+}
+
+.btn:active{
+  box-shadow: none;
+  position: relative;
+  top:10px;
+  left:10px;
 }
