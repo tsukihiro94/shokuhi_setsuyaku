@@ -13,24 +13,27 @@
           </div> 
           <div class = "price">
             <% @sum = eval("expense.price_#{i}") %>
-            <%= eval("expense.price_#{i}.to_s(:delimited)") %>
+            <%= eval("expense.price_#{i}") %>
+            <input type="hidden"  class= "price_val" id = "price" value = <%= eval("expense.price_#{i}").to_i %> >
           </div>
         </div>
         <div class = "expense">
           <div class = "name">
             <%= eval("expense.name_#{i + 1}") %>
           </div> 
-          <div class = "price" id = "price">
+          <div class = "price">
             <% @sum = @sum.to_i + eval("expense.price_#{i + 1}").to_i %>
             <%= eval("expense.price_#{i + 1}") %>
+            <input type="hidden"  class= "price_val" id = "price" value = <%= eval("expense.price_#{i + 1}").to_i %> >
           </div>
         </div>
         <div class = "expense">
           <div class = "name">
             <%= eval("expense.name_#{i + 2}") %>
           </div> 
-          <div class = "price" id = "price">
+          <div class = "price">
             <% @sum = @sum.to_i + eval("expense.price_#{i + 2}").to_i %>
+            <input type="hidden"  class= "price_val" id = "price" value = <%= eval("expense.price_#{i + 2}").to_i %> >
             <%= eval("expense.price_#{i + 2}") %>
           </div>
         </div>
@@ -38,8 +41,9 @@
           <div class = "name">
             <%= eval("expense.name_#{i + 3}") %>
           </div> 
-          <div class = "price" id = "price">
+          <div class = "price">
             <% @sum = @sum.to_i + eval("expense.price_#{i + 3}").to_i %>
+            <input type="hidden"  class= "price_val" id = "price" value = <%= eval("expense.price_#{i + 3}").to_i %> >
             <%= eval("expense.price_#{i + 3}") %>
           </div>
         </div>
@@ -47,8 +51,9 @@
           <div class = "name">
             <%= eval("expense.name_#{i + 4}") %>
           </div> 
-          <div class = "price" id = "price">
+          <div class = "price">
             <% @sum = @sum.to_i + eval("expense.price_#{i + 4}").to_i %>
+            <input type="hidden"  class= "price_val" id = "price" value = <%= eval("expense.price_#{i + 4}").to_i %> >
             <%= eval("expense.price_#{i + 4}") %>
           </div>
         </div>
@@ -56,8 +61,9 @@
           <div class = "name">
             <%= eval("expense.name_#{i + 5}") %>
           </div> 
-          <div class = "price" id = "price">
+          <div class = "price">
             <% @sum = @sum.to_i + eval("expense.price_#{i + 5}").to_i %>
+            <input type="hidden"  class= "price_val" id = "price" value = <%= eval("expense.price_#{i + 5}").to_i %> >
             <%= eval("expense.price_#{i + 5}") %>
           </div>
         </div>
@@ -65,8 +71,9 @@
           <div class = "name">
             <%= eval("expense.name_#{i + 6}") %>
           </div> 
-          <div class = "price" id = "price">
+          <div class = "price">
             <% @sum = @sum.to_i + eval("expense.price_#{i + 6}").to_i %>
+            <input type="hidden"  class= "price_val" id = "price" value = <%= eval("expense.price_#{i + 6}").to_i %> >
             <%= eval("expense.price_#{i + 6}") %>
           </div>
         </div>
@@ -74,8 +81,9 @@
           <div class = "name">
             <%= eval("expense.name_#{i + 7}") %>
           </div> 
-          <div class = "price" id = "price">
+          <div class = "price">
             <% @sum = @sum.to_i + eval("expense.price_#{i + 7}").to_i %>
+            <input type="hidden"  class= "price_val" id = "price" value = <%= eval("expense.price_#{i + 7}").to_i %> >
             <%= eval("expense.price_#{i + 7}") %>
           </div>
         </div>
@@ -83,8 +91,9 @@
           <div class = "name">
             <%= eval("expense.name_#{i + 8}") %>
           </div> 
-          <div class = "price" id = "price">
+          <div class = "price">
             <% @sum = @sum.to_i + eval("expense.price_#{i + 8}").to_i %>
+            <input type="hidden"  class= "price_val" id = "price" value = <%= eval("expense.price_#{i + 8}").to_i %> >
             <%= eval("expense.price_#{i + 8}") %>
           </div>
         </div>
@@ -92,8 +101,9 @@
           <div class = "name">
             <%= eval("expense.name_#{i + 9}") %>
           </div> 
-          <div class = "price" id = "price">
+          <div class = "price" id>
             <% @sum = @sum.to_i + eval("expense.price_#{i + 9}").to_i %>
+            <input type="hidden"  class= "price_val" id = "price" value = <%= eval("expense.price_#{i + 9}").to_i %> >
             <%= eval("expense.price_#{i + 9}") %>
           </div>
         </div>

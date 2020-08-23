@@ -4,10 +4,8 @@ window.addEventListener('DOMContentLoaded',() => {
   for(let i=0; i<10; i++) {
     
     const val = document.getElementsByClassName('sum_value')
-  
     if(val[i] != null){
       const number = (Number(val[i].textContent))
-      
       total[i] = number
     } else {
       return
