@@ -60,7 +60,7 @@ a{
 
 .left-content{
   width: 25%;
-  background-color: lightpink;
+  background-color:lightgoldenrodyellow;
 }
 
 h2{
@@ -98,7 +98,7 @@ input{
 }
 
 .name_price{
-  background-color: skyblue;
+  background-color: lightpink;
   display:inline-block;
 }
 .expenses{

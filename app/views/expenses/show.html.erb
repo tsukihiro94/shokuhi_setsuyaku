@@ -20,9 +20,9 @@
       <li>★一度に登録できるのは10品まで</li>
       <li>★日にちを選んで下さい！</li>
     <%= form_with(model: @expense,id: "form" ,local: true) do |f|%>
-        <%= f.date_field :day, class: 'recode-date' %>
-        <div id = "form-group" name= "form">
-         <div id = "group">
+    <%= f.date_field :day, class: 'recode-date' %>
+       <div id = "form-group" name= "form">
+        <div id = "group">
           <%= f.collection_select(:category_id_1, Category.all, :id, :name, {}, {class:"select-box"}) %>
           <%= f.text_field :name_1, class:"name-default", id:"name_1", placeholder:"詳細1"%>
           <%= f.text_field :price_1, class:"price-default",  id:"price_1", placeholder:"値段1"%>

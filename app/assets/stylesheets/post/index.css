@@ -29,16 +29,9 @@ width: 100px;
   display: flex;
 }
 
-.toukou-image{
-  position: absolute;  
-  top: 35px;
-  right: 360px;
-  width: 40px;
-}
-
 .nav-lists{
   height: 100px;
-  margin-top: 35px;
+  margin-top: 30px;
   display: flex;
   width: 50vw;
   justify-content: flex-end;
@@ -51,6 +44,12 @@ li{
 a{
   text-decoration: none;
   margin-right: 50px;
+}
+
+.name{
+  color: #3b82c4;
+  font-size:30px;
+  margin-right: 100px;
 }
 
 .btn{
@@ -74,7 +73,6 @@ a{
 
 .first-view{
   height: 500px;
-  /* background-color: yellow; */
   display: flex;
 }
 
@@ -104,7 +102,22 @@ h1:after {
   background: linear-gradient(to right, rgb(230, 90, 90), transparent);
 }
 .right-content{
-  width: 30vw;
+  width: 15vw;
+  
+}
+
+.character-image{
+position: relative;
+}
+
+.user_name{
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  font-size:40px;
+  font-weight: bold;
+  position: absolute;
+  top: 50px;
+  right: 80px;
 }
 
 .intro-video{
@@ -114,16 +127,27 @@ h1:after {
   font-size: 35px;
   display: flex;
   justify-content: center;
-  margin: 0 200px;
+  margin: 10px 200px;
 }
+
+
 
 .posts-list{
   border-radius: 0.5em;
   height: 800px;
   font-size: 35px;
   text-align: center;
-
+  position: relative;
 }
+
+.toukou-image{
+  width: 40px;
+  position: absolute;
+  right: 25px;
+  cursor: pointer;
+  cursor: hand;
+}
+
 .post-all{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -217,4 +241,33 @@ footer{
 
 .footer{
   padding-top:25px;
+}
+
+
+
+.modal{
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+.modal__bg{
+  background: rgba(0,0,0,0.8);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+}
+
+
+.modal__content{
+  background: #fff;
+  left: 50%;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 40%;
 }
