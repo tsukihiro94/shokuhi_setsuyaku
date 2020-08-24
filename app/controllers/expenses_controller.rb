@@ -13,7 +13,7 @@ class ExpensesController < ApplicationController
     if @expense.save
       redirect_to  "/expenses/#{current_user.id}"
     else
-      render :show
+      redirect_to  "/expenses/#{current_user.id}"
     end
   end
 
