@@ -2,8 +2,11 @@
 <input type="hidden" id = "user_id" value= <%="/expenses/#{current_user.id}"%> >
 <%= link_to image_tag("yen.png",class: "logo-image"), "/"%>
 <div class = "header">
-  <p class = "nickname"><%= @nickname %>さんの月次目標食費額</p>
-  <p class = "target_amount"><%= @target_amount %>円
+  <div class = "nickname"><%= @nickname %>さんの月次目標食費額</div>
+  <div class = "target_amount"><%= @target_amount %>円</div>
+   <div class = edit-content>
+    <div><%= link_to '目標予算を編集',  edit_user_registration_path(current_user.id), method: :get,class: 'btn' %></div>
+  </div>
 </div>
 <div class= "search_form">
   <%= form_with(url: search_expenses_path, local: true, method: :get, class: "search-form") do |form| %>
@@ -14,9 +17,10 @@
 <div class = "contents">
   <div class = "left-content">
     <h2>カンタン家計簿</h2>
+      <li>★一度に登録できるのは10品まで</li>
+      <li>★日にちを選んで下さい！</li>
     <%= form_with(model: @expense,id: "form" ,local: true) do |f|%>
-      <label for="bday">日にちを選んで下さい！</label>
-        <%= f.date_field :day, class: 'recod-date' %>
+        <%= f.date_field :day, class: 'recode-date' %>
         <div id = "form-group" name= "form">
          <div id = "group">
           <%= f.collection_select(:category_id_1, Category.all, :id, :name, {}, {class:"select-box"}) %>
@@ -33,9 +37,9 @@
   </div>
   <div class = "right-content">
     <div class = "content1">
-    <% @sum = 0 %>
-    <% @expenses.each do |expense| %>
-       <%= render partial: "expense", locals: { expense: expense } %>
+      <% @sum = 0 %>
+      <% @expenses.each do |expense| %>
+      <%= render partial: "expense", locals: { expense: expense } %>
     <% end %>
     </div>
   </div>
