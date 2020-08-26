@@ -28,11 +28,14 @@
 }
 
 .form-text{
-  font-size: 20px;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
 }
 
 ::placeholder {
   color: lightpink;
+  
 }
 
 

@@ -5,7 +5,7 @@
   <div class = "nickname"><%= @nickname %>さんの月次目標食費額</div>
   <div class = "target_amount"><%= @target_amount %>円</div>
    <div class = edit-content>
-    <div><%= link_to '目標予算を編集',  edit_user_registration_path(current_user.id), method: :get,class: 'btn' %></div>
+    <div><%= link_to '目標予算を編集',  edit_user_registration_path(current_user.id), method: :get,class: 'btn', id: "btn" %></div>
   </div>
 </div>
 <div class= "search_form">

@@ -1,9 +1,9 @@
 .header{
   display: flex;
-  margin: 0px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: blanchedalmond;
 }
 
 a{
@@ -33,10 +33,12 @@ a{
   left:5px;
 }
 .nickname{
-  font-size:25px
+  font-size:25px;
+  font-weight: bold;
 }
 
 .target_amount{
+  font-weight: bolder;
   font-size: 40px;
   color:red;
 }
@@ -44,7 +46,7 @@ a{
 .logo-image{
   position: absolute;
   left: 0px;
-  margin: 10px 0  0 10px;
+  margin: 17px 0  0 10px;
   width: 70px;
 }
 
@@ -60,7 +62,9 @@ a{
 
 .left-content{
   width: 25%;
-  background-color:lightgoldenrodyellow;
+  background-color:rgb(184, 214, 232);
+  border: solid 2px #696969;
+
 }
 
 h2{
@@ -73,9 +77,10 @@ li{
 
 
 .right-content{
-  background-color: lightcyan;
+  background-color: #FFF9EE;
   height: 550px;
   width: 75%;
+  border: solid 3px #696969;
 }
 
 .content1{
@@ -89,7 +94,7 @@ li{
 
 
 select{
-  padding:6px;
+  padding:8px;
 }
 
 input{
@@ -100,11 +105,9 @@ input{
 .name_price{
   background-color: lightpink;
   display:inline-block;
+  margin: 10px;
 }
-.expenses{
- margin: 10px;
 
-}
 
 
 
@@ -146,22 +149,12 @@ input{
   border-radius: 100vh;
 }
 
-ul.pagination {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  font-size:20px;
+footer{
+  background-color:#888888;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
-ul.pagination li {display: inline;}
-
-ul.pagination li a {
-  color:skyblue;
-  float: left;
-  padding: 8px 8px;
-  text-decoration: none;
-  border-radius: 50px;
-}
-
-
-ul.pagination li a:hover:not(.active) {background-color: seashell;}

@@ -58,3 +58,4 @@ gem 'active_hash'
 gem 'pry-rails'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem "jquery-rails"

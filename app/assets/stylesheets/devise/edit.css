@@ -2,29 +2,30 @@ html{
   background-color: #FFF9EE;
 }
 
+
 .top-logo{
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  height: 15vh;
+  height: 25vh;
 }
 
 .logo-image{
-  width: 80px;
+  width: 70px;
 }
 
 .form-contents{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+ 
   height: 70vh;
 }
 
 
 
 .form{
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 .input-default{

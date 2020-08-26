@@ -1,3 +1,8 @@
+html{
+  scroll-behavior: smooth;
+  background-color: #FFF9EE;
+}
+
 body{
   font-family: "Montserrat","游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
   line-height: 1.7;
@@ -21,6 +26,9 @@ width: 100px;
   width: 80px;
 }
 
+.title{
+  margin-top: 25px;
+}
 
 
 .heading{
@@ -31,20 +39,17 @@ width: 100px;
 
 .nav-lists{
   height: 100px;
-  margin-top: 30px;
+  margin: 30px 40px 0 0;
   display: flex;
   width: 50vw;
   justify-content: flex-end;
 }
-
-li{
-  list-style: none;
+.nav-list{
+  margin: 10px 40px 0 0;
+  font-size:16px;
+  font-weight: bold;
 }
 
-a{
-  text-decoration: none;
-  margin-right: 50px;
-}
 
 .name{
   color: #3b82c4;
@@ -53,6 +58,7 @@ a{
 }
 
 .btn{
+  margin: 10px 35px 0 0;
   border-radius: 0.5em;
   background-color: #eaf6fd;
   padding: 15px;
@@ -68,7 +74,7 @@ a{
 }
 
 .contents{
-  height: 1700px;
+  height: 1750px;
 }
 
 .first-view{
@@ -116,11 +122,12 @@ position: relative;
   font-size:40px;
   font-weight: bold;
   position: absolute;
-  top: 50px;
-  right: 80px;
+  top: 55px;
+  right: 83px;
 }
 
 .intro-video{
+  font-weight: bold;
   border-radius: 0.5em;
   height: 450px;
   background-color: #ed1c24;
@@ -134,8 +141,9 @@ position: relative;
 
 .posts-list{
   border-radius: 0.5em;
-  height: 800px;
+  height: 120vh;
   font-size: 35px;
+  font-weight: bold;
   text-align: center;
   position: relative;
 }
@@ -159,7 +167,7 @@ position: relative;
   position: relative;
   width: 15vw;
   height: 20vh;
-  margin: 1.3em 2.3em;
+  margin: 1.3em 2.8em;
   padding: 1em;
   background-color: #ffffcc;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
@@ -183,11 +191,13 @@ position: relative;
   -webkit-transform : translate(-30%,-50%);
   transform : translate(-50%,-50%);
   font-size: 15px;
+  font-weight: bold;
   text-align: center;
 }
 
 .nickname{
    font-size: 13px;
+   font-weight: bold;
    position: absolute;
    right: 7px;
    bottom:3px;
@@ -202,7 +212,7 @@ position: relative;
   padding: 1px 10px;
   text-decoration: none;
   position: absolute;
-  right: -40px;
+  right:10px;
   top: 8px;
   font-size: 12px;
   color: #fff;
@@ -211,36 +221,49 @@ position: relative;
 }
 
 ul.pagination {
-  display: inline-block;
+  display: flex;
   padding: 0;
   margin: 0;
   font-size:20px;
+  justify-content: center;
+  text-align: center;
 }
 
-ul.pagination li {display: inline;}
+
 
 ul.pagination li a {
+  font-weight: bold;
   color:skyblue;
   float: left;
-  padding: 8px 8px;
+  padding: 9px 23px;
   text-decoration: none;
-  border-radius: 50px;
+  border-radius: 100px;
 }
 
 
-ul.pagination li a:hover:not(.active) {background-color: seashell;}
+ul.pagination li a:hover:not(.active) {background-color:  #3b82c4;}
 
-footer{
-  background-color: white;
-  height: 100px;
+
+.paginate{
+  position: relative;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+}
+.paginate_current{
+  font-size:18px;
+
+}
+footer{
+  background-color:#888888;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-
 .footer{
-  padding-top:25px;
+  color: black;
 }
 
 

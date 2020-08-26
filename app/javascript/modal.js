@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded',() => {
 
-  const btn = document.getElementById('new_page');
+  const btn = document.getElementById('btn');
   const modal = document.getElementById("modal")
   const close = document.getElementById('close_image')
     
