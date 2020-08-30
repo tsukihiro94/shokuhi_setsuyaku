@@ -1,26 +1,63 @@
 .header{
   display: flex;
-  margin: 0px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: blanchedalmond;
+}
+
+a{
+  text-decoration: none;
+}
+
+.edit-content{
+  position: absolute;
+  right: 40px;
+  top:15px;
+}
+
+.btn{
+  border-radius: 0.5em;
+  background-color: #eaf6fd;
+  padding: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #3b82c4;
+  box-shadow: 5px 5px #3b82c4;
+}
+
+.btn:active{
+  box-shadow: none;
+  position: relative;
+  top:5px;
+  left:5px;
+}
+.nickname{
+  font-size:25px;
+  font-weight: bold;
 }
 
 .target_amount{
+  font-weight: bolder;
+  font-size: 40px;
   color:red;
 }
 
 .logo-image{
   position: absolute;
   left: 0px;
-  margin: 10px 0  0 10px;
+  margin: 17px 0  0 10px;
   width: 70px;
+  transition: transform 0.5s ease 0s;
+}
+.logo-image:hover{
+  transform:rotate(360deg);
 }
 
 .search_form{
   position: absolute;
-  right: 20px;
-  top:10px;
+  right: 40px;
+  top:70px;
 }
 .contents{
   height: 100%;
@@ -28,19 +65,30 @@
 }
 
 .left-content{
-  width: 30%;
-  background-color: lightpink;
+  width: 25%;
+  background-color:rgb(184, 214, 232);
+  border: solid 2px #696969;
+
 }
 
+h2{
+  text-align: center;
+}
+li{
+  list-style: none;
+  font-size: 20px;
+}
+
+
 .right-content{
+  background-color: #FFF9EE;
   height: 550px;
-  width: 70%;
+  width: 75%;
+  border: solid 3px #696969;
 }
 
 .content1{
-  background-color: #ddd;
   height: 100%;
-  width: 100%;
   display: flex;
   align-items: flex-end;
   overflow-x: auto;
@@ -48,28 +96,27 @@
   -webkit-overflow-scrolling: touch;
 }
 
+
 select{
-  padding:6px;
+  padding:8px;
 }
 
 input{
   padding:4px 0px;
-  width: 120px;
+  width: 100px;
 }
 
 .name_price{
-  background-color: skyblue;
- 
+  background-color: lightpink;
+  display:inline-block;
+  margin: 10px;
 }
-.expenses{
- margin: 10px;
- display: inline-block;
- width: 90%;
-}
+
 
 
 
 .expense {
+  display: inline-block;
   display: flex;
   justify-content: space-between;
 }
@@ -106,22 +153,12 @@ input{
   border-radius: 100vh;
 }
 
-ul.pagination {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  font-size:20px;
+footer{
+  background-color:#888888;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
-ul.pagination li {display: inline;}
-
-ul.pagination li a {
-  color:skyblue;
-  float: left;
-  padding: 8px 8px;
-  text-decoration: none;
-  border-radius: 50px;
-}
-
-
-ul.pagination li a:hover:not(.active) {background-color: seashell;}

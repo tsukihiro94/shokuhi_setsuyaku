@@ -1,19 +1,19 @@
-.top-logo{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.close-image{
+  width: 25px;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
+  cursor: hand;
 }
 
-.logo-image{
-  width: 80px;
-}
 
 .form-contents{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 70vh;
+  height: 50vh;
 }
 
 
@@ -24,18 +24,22 @@
 .input-default{
   display: block;
   height: 100px;
-  width: 340px;
+  width: 320px;
 }
 
 .form-text{
   font-size: 20px;
+  font-weight: bold;
 }
 
 ::placeholder {
+  font-weight: bold;
   color: lightpink;
 }
 
 
 .submit-btn{
   padding:10px 50px;
+  background-color:   #ffffcc;
+  border-radius: 2.0em;
 }

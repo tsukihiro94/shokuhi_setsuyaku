@@ -1,3 +1,7 @@
+html{
+  background-color: #FFF9EE;
+}
+
 .header{
   position: relative;
   height: 15vh;
@@ -10,9 +14,11 @@
   font-size: 30px;
   text-align: center;
   align-items: center;
+  font-weight: bold;
 }
 .sum_value{
   text-align: center;
+  font-weight: bold;
 }
 
 .logo-image{
@@ -21,6 +27,7 @@
   left: 20px;
   top:12px;
 }
+
 .back_image{
   display: block;
   flex-direction: column;
@@ -42,14 +49,17 @@
   top: 45px;
 }
 
+
 .contents{
-  height: 70%;
+  height: 85vh;
   display: flex;
 
 }
 
 .left_content{
+  height: 85vh;
   width: 20vw;
+  background-color: #FFF9EE;
 }
 
 .name_price{
@@ -58,9 +68,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-}
-.expenses{
- margin: 10px;
+  margin: 10px 10px 10px 10px;
 }
 
 .expense {
@@ -79,8 +87,8 @@
 
 .price .sum{
   margin-left: 20px;
-
 }
+
 .sum{
   display: flex;
   text-align: center;
@@ -95,14 +103,20 @@
 }
 
 .right_content{
+  height: 85vh;
   display: flex;
   width: 80vw;
 }
 
 .total_price{
   font-size:40px;
+  font-weight: bold;
+  color: red;
 }
 
+.texts{
+  background-color: #FFF9EE;
+}
 
 .judgment1 {
   font-size:45px;
@@ -111,8 +125,23 @@
   font-size:45px;
 }
 
+#judgment_3{
+  font-size:45px;
+  color: red;
+  font-weight: bold;
+}
+
 .advice{
   font-size:45px;
+}
+#advice1 {
+  font-weight: bolder;
+  color: red;
+  
+}
+
+.image{
+  background-color: #FFF9EE;
 }
 
 .character-image1, .character-image2, .character-image3{
@@ -145,3 +174,4 @@ a{
   top:10px;
   left:10px;
 }
+

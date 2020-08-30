@@ -6,7 +6,7 @@ class Expense < ApplicationRecord
   validates :day, presence: true
 
   def self.search(search)
-    if search != ""
+    if search != ''
       Expense.where('day LIKE(?)', "%#{search}%")
     else
       Expense.all

@@ -11,8 +11,9 @@
   </div>
   <div class = "navbar">
     <ul class = "nav-lists">
+      <a class ="nav-list" href="#intro-video">使い方</a>
+      <a class ="nav-list" href="#post_all">節約術投稿一覧</a>
       <% if user_signed_in? %>
-       <li><%= link_to image_tag("toukou.png",class: "toukou-image"), new_post_path %></li>
        <li><%= link_to "ログアウト", destroy_user_session_path ,method: :delete, class: "btn" %></li>
        <li><%= link_to "マイページ",  "/expenses/#{current_user.id}" ,class: "btn", id: "myPage"%></li>
       <% else%>
@@ -28,23 +29,65 @@
       <h1 class= "main-letter">誰でも簡単に食費を節約できる</h1>
     </div>
     <div class="right-conten">
-      <%= image_tag "pekopigu.png" ,class: "character-image" %>
+      <% if user_signed_in? %>
+      <div class = "character-image">
+      <div><%= image_tag "pekopigu1.png" ,class: "character-image1" %></div>
+      <div class = "user_name"><%=current_user.nickname%>さん<br>こんにちは！<br></div>
+      </div>
+      <% else %>
+      <div><%= image_tag "pekopigu2.png" ,class: "character-image" %></div>
+      <% end %>
     </div>
   </div>
-  <div class = "intro-video">
-    <div class = "intro-logo">アプリ動画紹介</div>
+  <div class = "intro-video" id = "intro-video">
+    <div class = "intro-logo">使い方</div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/O_h7D8J73ak" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <div class = "posts-list">
     <div class = "posts-logo" id = "post_all">節約術投稿一覧</div>
-      <% link_to image_tag("kizitoukou.png",class: "kigi-image"), "#" %>
-      <div class = "post-all">
-        <% @posts.each do |post| %>
-          <%= render partial: "post", locals: { post: post } %>
-        <% end %>
+      <% if user_signed_in? %>
+        <%=image_tag "toukou.png", class: "toukou-image",  id: "btn" %>
+      <% end %>
+      <div id="list">
       </div>
+    <div class = "post-all">
+    
+      <% @posts.each do |post| %>
+        <%= render partial: "post", locals: { post: post } %>
+      <% end %>
+    </div>
       <div class ="paginate">
-        <%= will_paginate @posts, :previous_label => ' &lt 前へ', :next_label => '次へ &gt'%>
-     </div>
+        <%= will_paginate @posts, previous_label: '&#8592; &nbsp;前', next_label: '次 &#8594;', inner_window: 3, outer_window: 0 %>
+       <div class ="paginate_current">
+          <%= @posts.current_page %> of <%= @posts.total_pages %>
+        </div>
+      </div>
+  </div>
+
+
+  <div class="modal" id = "modal">
+    <div class="modal__bg"></div>
+      <div class="modal__content">
+      <%= stylesheet_link_tag "post/modal_new", :media => "all" %>
+      <div class = "close-logo">
+        <%= image_tag "close.png" ,class: "close-image", id: "close_image" %>
+      </div>
+      <%= form_with model: @post,class: 'post-main', local: true, id:"form" do |f| %>
+        <div class = "form-contents">  
+          <div class = "form">
+            <label class="form-text">私の節約術</label>
+            <span class="indispensable">🐖</span> 
+            <%= f.text_field :text, class:"input-default", placeholder:"60文字以内であなたの節約術をシェアしよう！", autofocus: true, id: "text", maxlength:"60" %>
+          </div>
+          <span id="counts">0/60</span>
+        <div class="form">
+        <div class="submit">
+           <%= f.submit "シェア" ,class: "submit-btn", id: "submit-btn" %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+      </div>
     </div>
   </div>
 </div>

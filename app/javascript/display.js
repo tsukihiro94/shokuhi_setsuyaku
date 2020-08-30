@@ -21,4 +21,22 @@ window.addEventListener('DOMContentLoaded',() => {
       }
     });
   }
+
+  const text = document.getElementById('text');
+  const btn = document.getElementById('submit-btn');
+
+  text.addEventListener("input",function(){
+    const textVal = text.value
+    const counts = document.getElementById('counts');
+    console.log(textVal.length)
+    counts.textContent = `${textVal.length}/60`
+
+
+    if (textVal.length > 0){
+      btn.setAttribute("style", "background-color: wheat;");
+    }else{
+      btn.removeAttribute("style", "background-color: #FFF9EE;");
+    }
+  })
+
 });
