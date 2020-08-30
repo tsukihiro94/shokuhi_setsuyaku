@@ -24,8 +24,12 @@ width: 100px;
 .logo-image{
   margin: 10px 0  0 10px;
   width: 80px;
+  transition: transform 0.5s ease 0s;
 }
 
+.logo-image:hover{
+  transform:rotate(360deg);
+}
 .title{
   margin-top: 25px;
 }
@@ -74,7 +78,7 @@ width: 100px;
 }
 
 .contents{
-  height: 1750px;
+  height: 1950px;
 }
 
 .first-view{
@@ -132,9 +136,16 @@ position: relative;
   height: 450px;
   background-color: #ed1c24;
   font-size: 35px;
+  text-align: center;
   display: flex;
   justify-content: center;
-  margin: 10px 200px;
+  align-items:center;
+  flex-direction: column;
+  margin:100px 400px;
+}
+
+iframe{
+  width: 35vw;
 }
 
 
@@ -151,6 +162,7 @@ position: relative;
 .toukou-image{
   width: 40px;
   position: absolute;
+  top: 20px;
   right: 25px;
   cursor: pointer;
   cursor: hand;
@@ -167,7 +179,7 @@ position: relative;
   position: relative;
   width: 15vw;
   height: 20vh;
-  margin: 1.3em 2.8em;
+  margin: 1.3em 2.7em;
   padding: 1em;
   background-color: #ffffcc;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
@@ -235,7 +247,7 @@ ul.pagination li a {
   font-weight: bold;
   color:skyblue;
   float: left;
-  padding: 9px 23px;
+  padding: 10px 23px;
   text-decoration: none;
   border-radius: 100px;
 }
@@ -294,3 +306,4 @@ footer{
   transform: translate(-50%,-50%);
   width: 40%;
 }
+

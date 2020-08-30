@@ -48,6 +48,10 @@ a{
   left: 0px;
   margin: 17px 0  0 10px;
   width: 70px;
+  transition: transform 0.5s ease 0s;
+}
+.logo-image:hover{
+  transform:rotate(360deg);
 }
 
 .search_form{

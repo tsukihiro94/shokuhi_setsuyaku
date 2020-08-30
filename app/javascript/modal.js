@@ -13,5 +13,4 @@ window.addEventListener('DOMContentLoaded',() => {
       close.addEventListener('click', ()=>{
         modal.removeAttribute("style", "display: none;");
     });
-
 });

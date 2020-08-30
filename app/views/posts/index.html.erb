@@ -41,14 +41,8 @@
   </div>
   <div class = "intro-video" id = "intro-video">
     <div class = "intro-logo">使い方</div>
-    <div class = "slide" id="makeImg">
-      <div class = "a">あ</div>
-      <div class = "a">い</div>
-      <div class = "a">う</div>
-    </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/O_h7D8J73ak" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
-
-
   <div class = "posts-list">
     <div class = "posts-logo" id = "post_all">節約術投稿一覧</div>
       <% if user_signed_in? %>
@@ -57,6 +51,7 @@
       <div id="list">
       </div>
     <div class = "post-all">
+    
       <% @posts.each do |post| %>
         <%= render partial: "post", locals: { post: post } %>
       <% end %>
@@ -82,11 +77,12 @@
           <div class = "form">
             <label class="form-text">私の節約術</label>
             <span class="indispensable">🐖</span> 
-            <%= f.text_field :text, class:"input-default", placeholder:"60文字以内であなたの節約術をシェアしよう！", autofocus: true, id:"text", maxlength:"60" %>
+            <%= f.text_field :text, class:"input-default", placeholder:"60文字以内であなたの節約術をシェアしよう！", autofocus: true, id: "text", maxlength:"60" %>
           </div>
+          <span id="counts">0/60</span>
         <div class="form">
         <div class="submit">
-           <%= f.submit "投稿" ,class: "submit-btn" %>
+           <%= f.submit "シェア" ,class: "submit-btn", id: "submit-btn" %>
         </div>
       </div>
     </div>

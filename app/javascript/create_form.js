@@ -1,5 +1,6 @@
 window.addEventListener('DOMContentLoaded',function(){
   const path =  location.pathname
+  console.log(path)
   const myPagePath = document.getElementById('user_id').value
   if (path === myPagePath) {
     const e = 1

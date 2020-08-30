@@ -1,7 +1,7 @@
 class CreateExpenses < ActiveRecord::Migration[6.0]
   def change
     create_table :expenses do |t|
-      t.date       :day,           null: false
+      t.date       :day, null: false
       t.integer    :category_id_1
       t.string     :name_1
       t.integer    :price_1
@@ -32,7 +32,7 @@ class CreateExpenses < ActiveRecord::Migration[6.0]
       t.integer    :category_id_10
       t.string     :name_10
       t.integer    :price_10
-      t.references :user,      foreign_key: true
+      t.references :user, foreign_key: true
       t.timestamps
     end
   end

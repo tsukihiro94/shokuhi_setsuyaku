@@ -14,25 +14,23 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
- 
   def edit
     super
   end
-
 
   def update
     super
   end
 
-  #アカウント登録後のリダイレクト先
-def after_sign_up_path_for(resource)
-  root_path
-end
+  # アカウント登録後のリダイレクト先
+  def after_sign_up_path_for(_resource)
+    root_path
+  end
 
-#アカウント編集後のリダイレクト先
-def after_update_path_for(resource)
-  "/expenses/#{current_user.id}"
-end
+  # アカウント編集後のリダイレクト先
+  def after_update_path_for(_resource)
+    "/expenses/#{current_user.id}"
+  end
 
   # DELETE /resource
   # def destroy
