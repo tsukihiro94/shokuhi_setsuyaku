@@ -57,7 +57,7 @@
 
 ***
 # 実装した機能についての説明動画
-<iframe width="560" height="315" src="https://www.youtube.com/embed/O_h7D8J73ak" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://gyazo.com/602619d6e173a69bdc6f1080fa4c1915
 
 ***
 # データベース設計<br>
