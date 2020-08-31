@@ -1,6 +1,7 @@
 ![readme](https://user-images.githubusercontent.com/68362725/91681205-9f5d6880-eb88-11ea-8ea3-f0d763c71195.png)
 # アプリケーション名
-### カンタン食費節約家計簿アプリ
+ カンタン食費節約家計簿アプリ
+
 
 ***
 # 概要
@@ -11,11 +12,9 @@
  更に、食費に特化した家計簿なので1日の予算が達成出来なかった時は、どの食費を節約したら予算達成出来たか教えてくれる機能もあります。
  そして、従来の家計簿アプリには無かったSNS機能をつけることで楽しく節約ができ、毎日使いたくなる家計簿アプリになっています。
 
-
 ***
 #url
  
-
 ***
 #テスト用アカウント
  email:    peko@pigu
@@ -61,16 +60,16 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/O_h7D8J73ak" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ***
-#データベース設計
+#データベース設計<br>
 <img width="462" alt="7c03dc2368894819c0d013d4013b8bb6" src="https://user-images.githubusercontent.com/68362725/91681257-d895d880-eb88-11ea-9a99-1060f26fd824.png">
 
 ***
-#ローカルでの動作方法
-①git clone <コピーしたurl >
-②bundle install
-③rails db:create
-④rails db:migrate
-⑤rails s
+#ローカルでの動作方法<br>
+①git clone <コピーしたurl ><br>
+②bundle install<br>
+③rails db:create<br>
+④rails db:migrate<br>
+⑤rails s<br>
 
-ruby 2.6.5p114 
+ruby 2.6.5p114 <br>
 Rails 6.0.3.2
