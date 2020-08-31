@@ -65,7 +65,7 @@ https://gyazo.com/602619d6e173a69bdc6f1080fa4c1915
 
 ***
 # ローカルでの動作方法<br>
-①git clone <コピーしたurl ><br>
+①`git clone <コピーしたurl >`<br>
 ②bundle install<br>
 ③rails db:create<br>
 ④rails db:migrate<br>
