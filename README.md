@@ -1,6 +1,5 @@
 ![readme](https://user-images.githubusercontent.com/68362725/91681205-9f5d6880-eb88-11ea-8ea3-f0d763c71195.png)
-# 見出し1
-#　アプリケーション名
+# アプリケーション名
  カンタン食費節約家計簿アプリ
 
 ※※※
