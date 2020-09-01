@@ -61,3 +61,6 @@ gem 'pry-rails'
 gem 'pry-rails'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'will_paginate'
+group :production do
+  gem 'rails_12factor'
+end
