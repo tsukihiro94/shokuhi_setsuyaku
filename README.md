@@ -13,8 +13,8 @@
  そして、従来の家計簿アプリには無かったSNS機能をつけることで楽しく節約ができ、毎日使いたくなる家計簿アプリになっています。
 
 ***
-# url
- 
+# url<br>
+https://shokuhi-setsuyaku.herokuapp.com/
 ***
 # テスト用アカウント<br>
  email: peko@pigu<br>
