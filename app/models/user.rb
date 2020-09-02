@@ -8,7 +8,7 @@ class User < ApplicationRecord
   validates :password, format: { with: /\A(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}\z/, message: 'Include both letters and numbers' }
 
   has_many :expenses
-  has_many :post
+  has_many :posts
 
   def update_without_current_password(params, *options)
     params.delete(:current_password)

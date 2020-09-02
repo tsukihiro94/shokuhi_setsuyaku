@@ -39,7 +39,7 @@ class ExpensesController < ApplicationController
   end
 
   def set_expenses
-    @expenses = Expense.all
+    @expenses = Expense.includes(:user)
     @target_amount = current_user.target_amount
     @nickname = current_user.nickname
     @expenses = current_user.expenses.all.order(day: 'ASC')
