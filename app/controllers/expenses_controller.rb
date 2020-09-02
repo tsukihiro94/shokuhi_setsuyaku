@@ -1,5 +1,5 @@
 class ExpensesController < ApplicationController
-  before_action :set_expenses, only: %i[show search create destroy]
+  before_action :set_expenses, only: %i[show search create destroy search_month]
 
   def show
     @expense = Expense.new
@@ -26,6 +26,10 @@ class ExpensesController < ApplicationController
 
   def search
     @expenses = current_user.expenses.search(params[:keyword]).all.order(day: 'ASC')
+  end
+
+  def search_month
+    @expenses = current_user.expenses.search(params[:key]).all.order(day: 'ASC')
   end
 
   private
