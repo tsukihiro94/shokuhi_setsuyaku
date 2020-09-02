@@ -4,6 +4,29 @@
   align-items: center;
   flex-direction: column;
   background-color: blanchedalmond;
+  position: relative;
+}
+
+.logo-image{
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  width: 70px;
+  transition: transform 0.5s ease 0s;
+}
+.logo-image:hover{
+  transform:rotate(360deg);
+}
+
+.back_image{
+  display: block;
+  flex-direction: column;
+}
+
+.back_text{
+  position: absolute;
+  left: 0px;
+  top:80px;
 }
 
 a{
@@ -37,21 +60,10 @@ a{
   font-weight: bold;
 }
 
-.target_amount{
+.balance_price{
   font-weight: bolder;
   font-size: 40px;
   color:red;
-}
-
-.logo-image{
-  position: absolute;
-  left: 0px;
-  margin: 17px 0  0 10px;
-  width: 70px;
-  transition: transform 0.5s ease 0s;
-}
-.logo-image:hover{
-  transform:rotate(360deg);
 }
 
 .search_form{
@@ -64,31 +76,23 @@ a{
 .search-btn{
   margin-right: 10px;
 }
+
 .contents{
   height: 100%;
-  display: flex;
 }
 
 .left-content{
-  width: 25%;
   background-color:rgb(184, 214, 232);
   border: solid 2px #696969;
-
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+  font-size:25px;
 }
-
-h2{
-  text-align: center;
-}
-li{
-  list-style: none;
-  font-size: 20px;
-}
-
 
 .right-content{
   background-color: #FFF9EE;
   height: 550px;
-  width: 75%;
   border: solid 3px #696969;
 }
 
@@ -139,26 +143,5 @@ input{
 }
 
 .del{
-  position: relative;
-}
-
-.delBtn{
-  margin-top: 5px;
-  padding: 1px 10px;
-  text-decoration: none;
-  position: absolute;
-  right: 2px;
-  font-size: 12px;
-  color: #fff;
-  background-color: #eb6100;
-  border-radius: 100vh;
-}
-
-footer{
-  background-color:#888888;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  display: none;
 }
