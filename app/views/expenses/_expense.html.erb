@@ -5,6 +5,7 @@
       <div class = "day" id = "day">
         <%= expense.day.strftime('%m月%d日') %>
       </div>
+      <input type="hidden" id = "month" value= <%=expense.day.strftime('%m月')%> >
       <tr>
       <td class = "td">
         <div class = "expense">

@@ -12,4 +12,12 @@ class Expense < ApplicationRecord
       Expense.all
     end
   end
+
+  def self.search(search_month)
+    if search_month != ''
+      Expense.where('day LIKE(?)', "%#{search_month}%")
+    else
+      Expense.all
+    end
+  end
 end

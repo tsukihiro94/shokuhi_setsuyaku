@@ -26,6 +26,10 @@ html{
   position: absolute;
   left: 20px;
   top:12px;
+  transition: transform 0.5s ease 0s;
+}
+.logo-image:hover{
+  transform:rotate(360deg);
 }
 
 .back_image{
