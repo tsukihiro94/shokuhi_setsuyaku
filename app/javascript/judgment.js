@@ -9,13 +9,12 @@ window.addEventListener('DOMContentLoaded',() => {
   const thisYear = Number(year.value);
   const thisMonth = Number(month.value);
   
-  const d = new Date();
   let lastDate = new Date(thisYear, thisMonth, 0);
   lastDate =lastDate.getDate()
-  
+   console.log(lastDate)
   const budget =  Math.floor(targetAmountVal / lastDate)
   console.log(budget)
-  ByDay.textContent= `${day.textContent}の予算は、${budget}円です。`
+  ByDay.textContent= `${day.textContent}の予算は、${budget.toLocaleString()}円です。`
   //日にちと予算を計算し、表示する
   
   // 予算達成したかジャッジメント
