@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded',() => {
   const balancePrice = document.getElementById('balance_price')
   const sumPrice = document.getElementById('sum_price')
   balancePrice.textContent = `${(amountVal - sum).toLocaleString()}円`
-  sumPrice.textContent = `${(sum).toLocaleString()}円`
+  sumPrice.textContent = (sum).toLocaleString()
   console.log(balancePrice)
   console.log(sum)
 

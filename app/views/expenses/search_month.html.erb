@@ -5,7 +5,7 @@
     <%= link_to image_tag("mypage.png",class: "logo-image"), "/expenses/#{current_user.id}" %>
     <div class = "back_text">マイページへ戻る</div>
   </div>
-    <div class = "nickname"><%= @nickname %>さんの<span id="month_text"></span>の残高</div>
+    <div class = "nickname"><%= @nickname %>さんの<span id="month_text"></span>月の残高</div>
     <div class = "balance_price"><span id="balance_price">円</div>
    <div class = edit-content>
     <div><%= link_to '目標予算を編集',  edit_user_registration_path(current_user.id), method: :get,class: 'btn', id: "btn" %></div>
@@ -24,14 +24,21 @@
 <div class = "contents">
   <div class = "left-content">
     <div class = "target_amount">月次目標食費額：<%= @target_amount.to_s(:delimited) %>円</div>
-    <div class = "sum-price">現在の出費合計：<span id="sum_price">円</div>
+    <div class = "budget">1日の予算：<span id="budget"></span>円</div>
+    <div class = "sum-price">現在の出費合計：<span id="sum_price"></span>円</div>
   </div>
   <div class = "right-content">
+    <%= image_tag "judge.png" ,class: "judge-image" %>
     <div class = "content1">
       <% @sum = 0 %>
       <% @expenses.each do |expense| %>
+       <input type="hidden" id = "month" value = <%= expense.day.strftime('%m') %>>
+       <input type="hidden" id = "year" value = <%= expense.day.strftime('%Y') %>>
       <%= render partial: "expense", locals: { expense: expense } %>
     <% end %>
     </div>
   </div>
 </div>
+<footer>
+  <p class = "footer">Copyright 2020 shokuhi-setsuyaku All right reserved</p>
+</footer>

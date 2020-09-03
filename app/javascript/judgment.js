@@ -11,9 +11,7 @@ window.addEventListener('DOMContentLoaded',() => {
   
   let lastDate = new Date(thisYear, thisMonth, 0);
   lastDate =lastDate.getDate()
-   console.log(lastDate)
   const budget =  Math.floor(targetAmountVal / lastDate)
-  console.log(budget)
   ByDay.textContent= `${day.textContent}の予算は、${budget.toLocaleString()}円です。`
   //日にちと予算を計算し、表示する
   
@@ -45,13 +43,12 @@ window.addEventListener('DOMContentLoaded',() => {
         const itemNumber = (itemVal[i].textContent);
         total[i] = priceNumber
         items[i] = itemNumber
-        console.log(total);
-        console.log(items);
       }
     }; 
       
       const counts = total;  
        let goal = Math.abs(balance);
+       console.log(goal)
         if (balance > 0 || balance == 0)  {
           judgment1.textContent= "予算達成おめでとう"
           judgment3.textContent=`${balance}円`
@@ -61,13 +58,15 @@ window.addEventListener('DOMContentLoaded',() => {
           return
         }else if ( 0 > balance && balance > -500 ) {
           const over = Math.abs(balance);
-          goal = (goal * 1.1) ;
           let output = counts.reduce((prev, curr) => Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev);
           judgment1.textContent="惜しい...予算達成ならず"
           judgment2.textContent=`予算から`
           judgment3.textContent= `${over}円`
           judgment4.textContent=`オーバーです`
-          if((output - goal) > 0){
+
+          console.log(output - goal)
+
+          if((output - goal) >= 0){
           const indexNumber = total.indexOf(output)
           advice1.textContent= `${output}円の${items[indexNumber]}`
           advice2.textContent="を我慢したら予算達成したとん！"
@@ -76,7 +75,7 @@ window.addEventListener('DOMContentLoaded',() => {
           }else{
             goal = (goal * 1.2)
             output = counts.reduce((prev, curr) => Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev);
-            if((output - goal) > 0){
+            if((output - goal) >= 0){
               const indexNumber = total.indexOf(output)
               advice1.textContent= `${output}円の${items[indexNumber]}`
               advice2.textContent="を我慢したら予算達成したとん！"
@@ -85,7 +84,7 @@ window.addEventListener('DOMContentLoaded',() => {
             }else{
               goal = (goal * 1.3)
               output = counts.reduce((prev, curr) => Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev);
-              if((output - goal) > 0){
+              if((output - goal) >= 0){
                 const indexNumber = total.indexOf(output)
                 advice1.textContent= `${output}円の${items[indexNumber]}`
                 advice2.textContent="を我慢したら予算達成したとん！"
@@ -94,7 +93,7 @@ window.addEventListener('DOMContentLoaded',() => {
               }else{  
                 goal = (goal * 1.5)
               output = counts.reduce((prev, curr) => Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev);
-              if((output - goal) > 0){
+              if((output - goal) >= 0){
                 const indexNumber = total.indexOf(output)
                 advice1.textContent= `${output}円の${items[indexNumber]}`
                 advice2.textContent="を我慢したら予算達成したとん！"
@@ -103,7 +102,7 @@ window.addEventListener('DOMContentLoaded',() => {
               }else{  
                 goal = (goal * 1.5)
               output = counts.reduce((prev, curr) => Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev);
-              if((output - goal) > 0){
+              if((output - goal) >= 0){
                 const indexNumber = total.indexOf(output)
                 advice1.textContent= `${output}円の${items[indexNumber]}`
                 advice2.textContent="を我慢したら予算達成したとん！"
@@ -112,7 +111,7 @@ window.addEventListener('DOMContentLoaded',() => {
               }else{      
                 goal = (goal * 1.5)
               output = counts.reduce((prev, curr) => Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev);
-              if((output - goal) > 0){
+              if((output - goal) >= 0){
                 const indexNumber = total.indexOf(output)
                 advice1.textContent= `${output}円の${items[indexNumber]}`
                 advice2.textContent="を我慢したら予算達成したとん！"

@@ -1,4 +1,5 @@
 .header{
+  height: 110px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,7 +66,6 @@ a{
   margin-right: 10px;
 }
 .contents{
-  height: 100%;
   display: flex;
 }
 
@@ -87,7 +87,7 @@ li{
 
 .right-content{
   background-color: #FFF9EE;
-  height: 550px;
+  height: 575px;
   width: 75%;
   border: solid 3px #696969;
 }
@@ -112,7 +112,7 @@ input{
 }
 
 .name_price{
-  background-color: lightpink;
+  background-color: #9adaff;
   display:inline-block;
   margin: 10px;
 }
@@ -155,10 +155,8 @@ input{
 }
 
 footer{
-  background-color:#888888;
-  height: 200px;
+  height: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }

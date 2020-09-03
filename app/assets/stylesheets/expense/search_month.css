@@ -94,6 +94,13 @@ a{
   background-color: #FFF9EE;
   height: 550px;
   border: solid 3px #696969;
+  position: relative;
+}
+
+.judge-image{
+  position: absolute;
+  top: 0px;
+  width: 170px;
 }
 
 .content1{
@@ -116,7 +123,7 @@ input{
 }
 
 .name_price{
-  background-color: lightpink;
+  background-color:#9adaff;
   display:inline-block;
   margin: 10px;
 }
@@ -144,4 +151,11 @@ input{
 
 .del{
   display: none;
+}
+
+footer{
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
