@@ -53,7 +53,7 @@ https://shokuhi-setsuyaku.herokuapp.com/
 
 ***
 # 実装した機能についての紹介動画
-[アプリの機能紹介動画](https://youtu.be/NYTx00hOMuQ)
+[アプリの機能紹介動画](https://youtu.be/dRh48-GLd_I)
 
 ***
 # データベース設計<br>
