@@ -160,3 +160,10 @@ footer{
   justify-content: center;
   align-items: center;
 }
+
+.flash{
+  text-align: center;
+  background: rgb(184, 214, 232);
+  font-weight: bold;
+  color: red;
+}

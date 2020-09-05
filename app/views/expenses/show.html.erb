@@ -20,6 +20,11 @@
 </div>
 <div class = "contents">
   <div class = "left-content">
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
     <h2>カンタン家計簿</h2>
       <li>★一度に登録できるのは10品まで</li>
       <li>★日にちを選んで下さい！</li>

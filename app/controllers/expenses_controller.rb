@@ -11,6 +11,7 @@ class ExpensesController < ApplicationController
     if @expense.save
       redirect_to  "/expenses/#{current_user.id}"
     else
+      flash[:notice] = "登録失敗だとん。日にちを選んでね！🐷"
       redirect_to  "/expenses/#{current_user.id}"
     end
   end
