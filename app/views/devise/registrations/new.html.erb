@@ -4,7 +4,7 @@
   <%= link_to image_tag("yen.png",class: "logo-image"), "/" %>
 </div>
 <%= form_with model: @user,url: user_registration_path, class: 'registration-main', local: true do |f| %>
-<%= render 'shared/error_messages', model: f.object %>
+<%= render 'shared/error_messages', model: f.object, class: "error_messages"%>
 <div class = "form-contents">  
   <div class = "form">
     <label class="form-text">ニックネーム</label>
