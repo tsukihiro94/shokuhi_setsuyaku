@@ -63,4 +63,6 @@ html{
   font-size: 1.3vw;
   list-style: circle;
   color: rgb(182, 48, 0);
+  text-align: center;
+  list-style: none;
 }

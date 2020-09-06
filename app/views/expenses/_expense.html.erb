@@ -115,7 +115,7 @@
           <div>円</div>
         </div>
        <div class ="del">
-         <%= link_to '消', "/expenses/#{expense.id}" , method: :delete, data: {confirm: "削除しますか？"}, class: "delBtn" %>
+         <%= link_to '消', "/expenses/#{expense.id}" , method: :delete, data: {confirm: "削除しますか？"}, class: "delBtn", name: "del" %>
       </div>
       </td>
       </tr>

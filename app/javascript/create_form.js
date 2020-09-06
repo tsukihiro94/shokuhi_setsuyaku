@@ -50,7 +50,7 @@ window.addEventListener('DOMContentLoaded',function(){
     text1.className = "name-default"
   
     const text2 = document.createElement('input')
-    text2.type = 'text'
+    text2.type = 'number'
     text2.name ='expense[price_' + (e + indexNumber) +']'
     text2.id ='price_' + (e + indexNumber);
     text2.placeholder = '値段' +(e + indexNumber);

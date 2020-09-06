@@ -20,6 +20,11 @@
 </div>
 <div class = "contents">
   <div class = "left-content">
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
     <h2>カンタン家計簿</h2>
       <li>★一度に登録できるのは10品まで</li>
       <li>★日にちを選んで下さい！</li>
@@ -29,12 +34,12 @@
         <div id = "group">
           <%= f.collection_select(:category_id_1, Category.all, :id, :name, {}, {class:"select-box"}) %>
           <%= f.text_field :name_1, class:"name-default", id:"name_1", placeholder:"詳細1"%>
-          <%= f.text_field :price_1, class:"price-default",  id:"price_1", placeholder:"値段1"%>
+          <%= f.number_field :price_1, class:"price-default",  id:"price_1", placeholder:"値段1", setp:"1"%>
          </div>
         </div>
         <input type="button" value="追加" id="add" >
         <input type="button" value="削除" id="delete" >
-        <%= f.submit "登録" , id: "submit-btn",data: {confirm: "登録しますか？"} %>
+        <%= f.submit "登録" , id: "submit-btn",data: {confirm: "登録しますか？"},name:"submit" %>
     <% end %>
   </div>
   <div id="list">
