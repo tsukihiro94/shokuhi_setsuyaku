@@ -3,4 +3,5 @@ FactoryBot.define do
     text        {"こんにちは"}
     association :user
   end
+
 end
