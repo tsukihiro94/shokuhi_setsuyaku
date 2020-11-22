@@ -1,0 +1,166 @@
+body{
+  font-family: "Montserrat","游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+  line-height: 1.7;
+  color: #432;
+}
+
+header{
+  height: 90px;
+  display: flex;
+  background-color: rgb(40, 38, 38);
+}
+
+  .logo-image{
+    margin: 15px;
+    justify-content: center;
+  }
+
+  .header-logo{
+    background: rgb(150, 204, 245);
+    text-align: center;
+    border-radius: 4%;
+    bottom: 32px;
+    right: 32px;
+    position: fixed;
+  }
+  
+.contents{
+  height: 1850px;
+  background-image:linear-gradient(-45deg, #f9f8f7 25%, #ffffff 25%, #ffffff 50%, #f9f8f7  50%, #f9f8f7 75%, #ffffff 75%, #ffffff);
+}
+
+.first-view{
+  height: 500px;
+  display: flex;
+
+}
+
+
+.left-content{
+  width: 40vw;
+  position: relative;
+}
+
+.profile-image{
+  width: 350px;
+  height: 400px;
+  position: absolute;
+  top: 50px;
+  left: 30%
+}
+
+
+.right-content{
+  width: 60vw;
+}
+
+.profile-name{
+  text-align: center;
+  margin-top: 30px;
+}
+.skill-pr{
+  display: flex;
+  justify-content: center;
+}
+
+.skill {
+  width: 150px;
+  position: relative;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #95ccff;
+  border-radius: 8px;
+  background-color: white;
+}
+.pr {
+  width: 480px;
+  position: relative;
+  margin: 2em 0px 2em 20px;
+  padding: 0.5em 1em;
+  border: solid 3px #ff9595;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.pr .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -13px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 19px;
+  background: #FFF;
+  color: #ff9595;
+  font-weight: bold;
+}
+.skill .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -13px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 19px;
+  background: #FFF;
+  color: #95ccff;
+  font-weight: bold;
+}
+.skill p {
+  margin: 0; 
+  padding: 0;
+}
+
+
+h1{
+  text-align: center;
+}
+
+.portfolio1{
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio1-info{
+  width: 400px;
+  margin-right: 10px;
+}
+h2{
+  text-align: center;
+}
+.kitune{
+  width: 500px;
+  height: 600px;
+}
+
+.amazon{
+  color: #0f7fe9;
+  font-size: 20px;
+  text-align: right;
+}
+
+.portfolio2{
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio2-info{
+  width: 450px;
+  margin-left: 10px;
+}
+
+
+footer{
+  background-color:#888888;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer{
+  color: black;
+}

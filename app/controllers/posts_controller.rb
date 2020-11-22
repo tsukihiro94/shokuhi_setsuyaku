@@ -33,6 +33,10 @@ class PostsController < ApplicationController
     redirect_to root_path, notice: 'ゲストユーザーとしてログインしました。'
   end
 
+  def show
+    
+  end
+
   private
 
   def post_params

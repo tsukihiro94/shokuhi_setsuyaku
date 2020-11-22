@@ -14,6 +14,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 Rails.application.config.assets.precompile += %w[reset.css]
 Rails.application.config.assets.precompile += %w[post/index.css]
+Rails.application.config.assets.precompile += %w[post/profile.css]
 Rails.application.config.assets.precompile += %w[post/new.css]
 Rails.application.config.assets.precompile += %w[devise/new.css]
 Rails.application.config.assets.precompile += %w[devise/edit.css]
