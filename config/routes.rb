@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :posts
   post '/posts/guest_sign_in', to: 'posts#new_guest'
+  get '/posts/profile' => 'posts#profile'
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }

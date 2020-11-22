@@ -11,6 +11,8 @@
   </div>
   <div class = "navbar">
     <ul class = "nav-lists">
+      <a class ="nav-list" href="#app-info">アプリについて</a>
+      <a class ="nav-list" href="/posts/profile">プロフィール</a>
       <a class ="nav-list" href="#intro-video">使い方</a>
       <a class ="nav-list" href="#post_all">節約術投稿一覧</a>
       <% if user_signed_in? %>
@@ -63,6 +65,17 @@
           <%= @posts.current_page %> of <%= @posts.total_pages %>
         </div>
       </div>
+  </div>
+   <div class = "app-info" id = "app-info">
+    <div class = "app-logo">アプリについて</div>
+    <div class = "app-contents">
+      <div class = "left-app"><%= image_tag "aicon.png" , class: "aicon-image" %></div>
+      <div class = "right-app">
+        <div class= "overview">食費は、20~30代女性の1ヶ月平均出費額の割合で家賃に続き大部分を占めています。<br>貯金を目的として家計簿をつけた経験はあるものの、実際に貯金までできなかった。<br>どの食費を節約できたかイマイチ分からなかった。<br>そんな結果で終わった人は多いと思います。<span class="font-size">(家計簿が続かなかった割合は、利用者の約6割と言われています)</span><br>
+        このアプリでは、直感的に家計簿を簡単に付けることができます。<br>更に、食費に特化した家計簿なので1日の予算が達成出来なかった日は、どの食費を我慢したら予算達成出来たか教えてくれる機能もあります。そして、従来の家計簿アプリには無かったSNS機能もあるので楽しく節約ができ、毎日使いたくなる家計簿アプリです！
+</div>
+      </div>
+    </div>
   </div>
 
 
